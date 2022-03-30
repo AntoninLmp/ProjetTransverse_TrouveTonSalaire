@@ -1,19 +1,5 @@
-{% load static %}
-<!DOCTYPE html>
-<html lang="en">
+{% extends 'base.html' %} {% block content %}
 
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="{% static 'css/style.css' %}">
-    <title>Mon doc </title>
-</head>
-
-<body>
-    <h1>Bonjour {{prenom}}</h1>
-    <p>A retenir : Lorsque l'on se trouve dans une application, Django résout lui même le chemin pour un dossier static par exemple. Mais quand on sors de ces application ce n'est plus le cas et on doit le spécifier dans settings ps : je ne savait pas ou
-        noter ca </p>
-</body>
-
-</html>
+<h1> Accueil</h1>
+<h2> Bonjour{{prenom}}</h2>
+{% endblock %}

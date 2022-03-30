@@ -12,6 +12,14 @@
 
 <body>
     <a href="{% url 'accueil_entreprise' %}"><h1>bouton accueil entreprise </h1></a>
+    {% if user.is_authenticated %}
+        {{ user.username }}
+    <a href="{% url 'logout' %}"><h2>Déconnexion </h2></a>
+   
+    {% else %}
+    <a href="{% url 'login' %}"><h1>Connexion </h1></a>
+    <a href="{% url 'signup' %}"><h1>S'inscrire </h1></a>
+    {% endif %}
     
     {% block content %}
     
