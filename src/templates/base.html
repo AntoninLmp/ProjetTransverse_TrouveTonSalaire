@@ -6,25 +6,33 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="{% static 'css/styleEntreprise.css' %}">
-    <title>Ma page de base</title>
+    <link rel="stylesheet" href="{% static 'css/styleEntreprise.css' %}"> {% block content1 %} {% endblock %}
 </head>
 
 <body>
-    <a href="{% url 'accueil_entreprise' %}"><h1>bouton accueil entreprise </h1></a>
-    {% if user.is_authenticated %}
-        {{ user.username }}
-    <a href="{% url 'logout' %}"><h2>Déconnexion </h2></a>
-   
-    {% else %}
-    <a href="{% url 'login' %}"><h1>Connexion </h1></a>
-    <a href="{% url 'signup' %}"><h1>S'inscrire </h1></a>
-    {% endif %}
-    
-    {% block content %}
-    
-    {% endblock  %}
+    <header>
+        <nav class="nav_bar">
+            <a href="{% url 'accueil_entreprise' %}">
+                <h1>bouton accueil entreprise </h1>
+            </a>
+            {% if user.is_authenticated %} {{ user.username }}
+            <a href="{% url 'logout' %}">
+                <h2>Déconnexion </h2>
+            </a>
 
+            {% else %}
+            <a href="{% url 'login' %}">
+                <h1>Connexion </h1>
+            </a>
+            <a href="{% url 'signup' %}">
+                <h1>S'inscrire </h1>
+            </a>
+            {% endif %}
+        </nav>
+    </header>
+    <main>
+        {% block content2 %} {% endblock %}
+    </main>
 </body>
 
 </html>
