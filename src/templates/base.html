@@ -6,14 +6,17 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="{% static 'css/styleEntreprise.css' %}"> {% block content1 %} {% endblock %}
+    <link rel="stylesheet" href="{% static 'css/style.css' %}"> {% block content1 %} {% endblock %}
 </head>
 
 <body>
     <header>
         <nav class="nav_bar">
+            <a href="{% url 'index' %}">
+                <h1>Accueil</h1>
+            </a>
             <a href="{% url 'accueil_entreprise' %}">
-                <h1>bouton accueil entreprise </h1>
+                <h1>Entreprise</h1>
             </a>
             {% if user.is_authenticated %} {{ user.username }}
             <a href="{% url 'logout' %}">
