@@ -1,6 +1,12 @@
-{% extends 'base.html' %} {% block content %}
+{% extends 'base.html' %}
+{% load static %} 
+{% block content1 %}
+<link rel="stylesheet" href="{% static 'css/styleEntreprise.css' %}">
+<title>Entreprise</title>
+{% endblock %}
+ {% block content2 %}
 
-<h2> Modification propre a cette page en plus de base.html</h2>
+<h1> Entreprise</h1>
 
 {% for ent in entreprises %}
 

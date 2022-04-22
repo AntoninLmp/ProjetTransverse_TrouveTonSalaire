@@ -1,9 +1,7 @@
 {% extends 'base.html' %} {% load static %} {% block content1 %}
 <link rel="stylesheet" href="{% static 'css/styleEntreprise.css' %}">
-<title>{{entreprise.nom}}</title>
+<title>Orientation</title>
 {% endblock %} {% block content2 %}
 
-
-<p> nom : {{entreprise.nom}}</p>
-
-<img src="{{entreprise.logo.url}}" alt="{{entreprise.nom}}"> {% endblock %}
+<h1>Bienvenue dans orientation</h1>
+{% endblock %}

@@ -2,3 +2,15 @@ body {
     text-align: justify;
     padding: 3em;
 }
+
+.nav_bar {
+    display: flex;
+    color: white;
+    background-color: #005F73;
+    justify-content: space-between;
+}
+
+.nav_bar a {
+    color: white;
+    text-decoration: none;
+}
