@@ -16,4 +16,4 @@ def entreprise_trouvee(request, slug):
     return render(request, "salaires/entreprise_trouvee.html", context={"entreprise" : entreprise})
 
 def orientation(request):
-    return render(request, "orientation.html")
+    return render(request, "salaires/orientation.html")

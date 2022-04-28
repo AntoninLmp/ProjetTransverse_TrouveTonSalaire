@@ -18,6 +18,9 @@
             <a href="{% url 'accueil_entreprise' %}">
                 <h1>Entreprise</h1>
             </a>
+            <a href="{% url 'orientation' %}">
+                <h1>Orientation</h1>
+            </a>
             {% if user.is_authenticated %} {{ user.username }}
             <a href="{% url 'logout' %}">
                 <h2>Déconnexion </h2>
