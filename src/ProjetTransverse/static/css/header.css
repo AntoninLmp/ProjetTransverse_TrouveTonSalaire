@@ -1,0 +1,58 @@
+body {
+    margin: 0;
+}
+
+.nav_header {
+    font-family: akshar;
+    padding: 12px;
+    align-items: center;
+    background-color: #005F73;
+}
+
+.nav_list {
+    display: flex;
+    justify-content: center;
+    width: 90%;
+    align-items: center;
+    margin: 0;
+}
+
+.nav_list li {
+    display: flex;
+    height: 100%;
+    text-align: center;
+    color: white;
+    /* border-bottom: 2px solid #730000; */
+}
+
+.nav_list li a {
+    padding: 0 0.5em;
+    margin: 0;
+    font-size: 1.2em;
+    color: rgb(155, 154, 154);
+    text-transform: uppercase;
+    display: flex;
+    letter-spacing: 0.20em;
+    text-decoration: none;
+    height: 100%;
+}
+
+.nav_list li a:hover {
+    color: rgb(219, 219, 219);
+}
+
+#img_logo {
+    width: 3em;
+    padding: 1.4em;
+}
+
+.displayFlex {
+    display: flex;
+}
+
+/* QUESTIONNAIRE */
+
+#quest_entree {
+    background-color: grey;
+    border-radius: 3px;
+}
