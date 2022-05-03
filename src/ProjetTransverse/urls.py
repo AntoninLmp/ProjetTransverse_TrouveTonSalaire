@@ -20,15 +20,15 @@ from ProjetTransverse.views import index, page
 from salaires.views import accueil_entreprise, entreprise_trouvee
 from ProjetTransverse import settings
 from django.conf.urls.static import static
-from accounts.views import signup,logout_user, login_user
+from accounts.views import signup, logout_user, login_user
 
 urlpatterns = [
     path('', index, name="index"),
     path('admin/', admin.site.urls),
     path('page<int:numero_page>/', page),
-    path('entreprise/',accueil_entreprise, name="accueil_entreprise"),
-    path('entreprise/<str:slug>/',entreprise_trouvee, name="entreprise_trouvee"),
-    path('signup/',signup, name="signup"),
-    path('logout/',logout_user, name="logout"),
-    path('login/',login_user, name="login"),
-]+ static(settings.MEDIA_URL,document_root = settings.MEDIA_ROOT)
+    path('entreprise/', accueil_entreprise, name="accueil_entreprise"),
+    path('entreprise/<str:slug>/', entreprise_trouvee, name="entreprise_trouvee"),
+    path('signup/', signup, name="signup"),
+    path('logout/', logout_user, name="logout"),
+    path('login/', login_user, name="login"),
+] + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)

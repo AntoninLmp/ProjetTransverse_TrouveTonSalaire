@@ -1,6 +1,66 @@
-{% extends 'base.html' %} {% block content1 %}
+{% extends 'base.html' %}
+{% load static %}
+
+<!-- Head of page -->
+{% block content1 %}
+
 <title>Accueil</title>
-{% endblock %} {% block content2 %}
-<h1> Accueil</h1>
-<h2> Bonjour</h2>
+<link rel="stylesheet" href=" {% static 'css/accueil.css' %} ">
+
+{% endblock %}
+
+{% block content2 %}
+<!-- MAIN HOME PAGE -->
+
+<div class="container_home container_1 displayFlex">
+    <div>
+        <h1 class="text_homePage">Stop au tabous</h1>
+        <p>Ensemble, participons à la détaboutisation des salaires !</p>
+    </div>
+    <div class="container_1_2">
+        <a href="#" id="but_quest">
+            Je me lance
+        </a>
+    </div>
+</div>
+
+<div class="container_home container_2">
+    <h1>Nos objectifs et nos envies</h1>
+    <div class="displayFlex cont_2_1">
+        <img src="https://o.remove.bg/downloads/4d051a17-4c83-437e-8ddd-bec5108eb87a/collegues-salaires-comparaison-removebg-preview.png"
+            alt="tabou Salaire" id="imgHP1">
+        <p>
+            Quel est le montant de ton <span>salaire</span> ? Combien <span>gagnes</span>-tu ? Voilà quelques-unes des
+            questions les plus <span>taboues</span> en France. Que ce soit en famille ou dans le milieu professionnel,
+            il est presque indécent de parler ouvertement d’argent. Nous souhaitons changer ça ! Nous voulous agir pour
+            une <span>détaboutisation</span> des salaires mais également de l'argent en générale.
+        </p>
+    </div>
+</div>
+
+<div class="container_home container_3">
+    <h1>Nous autres les créateurs</h1>
+    <ul class="displayFlex">
+        <div>
+            <li>
+                <img src="https://cdn-icons-png.flaticon.com/512/1871/1871373.png" alt="Img_ordinateur">
+            </li>
+            <h2>Innover</h2>
+        </div>
+        <div>
+            <li>
+                <img src="https://cdn-icons.flaticon.com/png/512/4358/premium/4358324.png?token=exp=1651587346~hmac=3af461576fb9ad616b5fc37d3bf7ffda"
+                    alt="">
+            </li>
+            <h2>Changer</h2>
+        </div>
+        <div>
+            <li>
+                <img src="https://cdn-icons-png.flaticon.com/512/5783/5783148.png" alt="">
+            </li>
+            <h2>Futur</h2>
+        </div>
+    </ul>
+</div>
+
 {% endblock %}

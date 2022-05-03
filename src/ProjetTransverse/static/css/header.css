@@ -6,7 +6,7 @@ body {
     font-family: akshar;
     padding: 12px;
     align-items: center;
-    background-color: #005F73;
+    background-color: #1D5C63;
 }
 
 .nav_list {
@@ -29,7 +29,7 @@ body {
     padding: 0 0.5em;
     margin: 0;
     font-size: 1.2em;
-    color: rgb(155, 154, 154);
+    color: #417D7A;
     text-transform: uppercase;
     display: flex;
     letter-spacing: 0.20em;
