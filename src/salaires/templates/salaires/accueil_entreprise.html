@@ -1,13 +1,15 @@
 {% extends 'base.html' %}
-{% load static %}
+{% load static %} 
 {% block content1 %}
 <link rel="stylesheet" href="{% static 'css/styleEntreprise.css' %}">
 <title>Entreprise</title>
 {% endblock %}
+ {% block content2 %}
 
-{% block content2 %}
 <h1> Entreprise</h1>
+
 {% for ent in entreprises %}
+
 <p> {{ent.nom}}</p>
 
 <a href="{{ ent.get_absolute_url }}"> voir l'entreprises</a>
