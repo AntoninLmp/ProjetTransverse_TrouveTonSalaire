@@ -21,6 +21,7 @@ from salaires.views import accueil_entreprise, entreprise_trouvee
 from ProjetTransverse import settings
 from django.conf.urls.static import static
 from accounts.views import signup, logout_user, login_user
+from Orientation.views import orientation
 
 urlpatterns = [
     path('', index, name="index"),
@@ -31,4 +32,5 @@ urlpatterns = [
     path('signup/', signup, name="signup"),
     path('logout/', logout_user, name="logout"),
     path('login/', login_user, name="login"),
+    path('orientation/', orientation, name="orientation"),
 ] + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)

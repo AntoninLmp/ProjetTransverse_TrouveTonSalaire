@@ -31,7 +31,7 @@
                     <a href="{% url 'accueil_entreprise' %}" class="navbar_header">Entreprise</a>
                 </li>
                 <li>
-                    <a href="#" class="navbar_header">Orientation</a>
+                    <a href="{% url 'orientation' %}" class="navbar_header">Orientation</a>
                 </li>
                 <li>
                     {% if user.is_authenticated %} {{ user.username }}
