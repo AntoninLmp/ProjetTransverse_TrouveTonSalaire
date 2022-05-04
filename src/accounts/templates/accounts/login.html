@@ -17,17 +17,17 @@
         <div>
             <img src="{% static 'images/desk_img.png' %}" alt="Images_ordinateur" id="img_co">
         </div>
-        <div class="moduleCo">
+        <div class="moduleCo2">
             <h1>Connexion</h1>
             <form method="POST">
                 {% csrf_token %}
-                <div class="container_2">
+                <div class="container_2 container_connexion">
                     <label for="username">
                         <img src="{% static 'images/user.png' %}" alt="user" class="img_co_ls">
                     </label>
                     <input id="username" type="text" name="username" placeholder="username">
                 </div>
-                <div class="container_2">
+                <div class="container_2 container_connexion">
                     <label for="password">
                         <img src="{% static 'images/lock.png' %}" alt="lock" class="img_co_ls">
                     </label>

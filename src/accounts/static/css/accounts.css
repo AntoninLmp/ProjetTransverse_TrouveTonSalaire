@@ -10,7 +10,6 @@ main {
 }
 
 #img_co {
-    /* width: ; */
     max-width: 300px;
 }
 
@@ -18,27 +17,37 @@ main {
     flex-direction: column;
     background-color: rgb(247, 247, 247);
     border-radius: 10px;
-    padding: 1em;
+    /* padding: 1em; */
     margin: 5% 0;
 }
 
-#container_name {
+.container_connexion {
+    margin: 5% 10%;
+}
+
+.container_input {
     padding: 0.5em;
     top: 25px;
 }
 
-.container_2 input {
-    position: relative;
-    top: -15px;
+.container_2 input,
+select {
     padding: 0.5em;
     border: 1px solid rgb(233, 233, 233);
     border-radius: 10px;
+    position: relative;
+    top: -5px;
+    width: 12em;
 }
 
-#name {
+.positionInput1 {
     position: relative;
-    top: 0;
-    left: 23px;
+    top: -6px;
+}
+
+#form_1 {
+    display: flex;
+    justify-content: space-evenly;
 }
 
 .moduleCo {
@@ -47,11 +56,35 @@ main {
     background-color: white;
     padding: 0.8rem;
     text-align: center;
+    width: 50%;
     min-width: 300px;
 }
 
+.moduleCo2 {
+    border: 1px solid white;
+    border-radius: 10px;
+    background-color: white;
+    padding: 0.8rem;
+    text-align: center;
+    width: 30%;
+    min-width: 300px;
+}
+
+.pos1 {
+    position: relative;
+    top: -5em;
+}
+
+.moduleCo article {
+    width: 300px;
+    margin: 0 15px;
+}
+
 .img_co_ls {
-    width: 45px;
+    width: 2em;
+    position: relative;
+    top: 5px;
+    right: 8px;
 }
 
 #connnexionButt {
