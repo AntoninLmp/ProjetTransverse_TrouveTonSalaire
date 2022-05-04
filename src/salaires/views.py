@@ -15,6 +15,5 @@ def entreprise_trouvee(request, slug):
     entreprise = get_object_or_404(Entreprise,slug=slug)
     return render(request, "salaires/entreprise_trouvee.html", context={"entreprise" : entreprise})
 
-def entreprise_trouvee(request, slug):
-    entreprise = get_object_or_404(Entreprise,slug=slug)
-    return render(request, "salaires/entreprise_trouvee.html", context={"entreprise" : entreprise})
+def orientation(request):
+    return render(request, "salaires/orientation.html")
