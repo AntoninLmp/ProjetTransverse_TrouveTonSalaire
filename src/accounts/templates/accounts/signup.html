@@ -1,3 +1,4 @@
+{% load static %}
 <!DOCTYPE html>
 <html lang="fr">
 
@@ -5,23 +6,184 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>sign up</title>
+    <link rel="stylesheet" href="{% static 'css/accounts.css' %}">
+    <link rel="icon" href="{% static 'images/logo_website.png' %}">
+    <title>Inscription</title>
 </head>
 
 <body>
-    <h1>S'inscrire</h1>
-    <form method="POST">
-        {% csrf_token %}
-        <p>
-            <label for="username">Nom d'utilisateur</label>
-            <input id="username" type="text" name="username">
-        </p>
-        <p>
-            <label for="password">Mot de passe</label>
-            <input id="password" type="password" name="password">
-        </p>
-        <button type="submit">S'inscrire</button>
-    </form>
+    <main>
+        <div>
+            <img src="{% static 'images/desk_img.png' %}" alt="Images_ordinateur" id="img_co">
+        </div>
+        <div class="moduleCo pos1">
+            <h1>S'inscrire</h1>
+            <form method="POST" id="form_1">
+                <article>
+                    <div class="container_2 container_input">
+                        <label for="entreprise">
+                            <img src="{% static 'images/entreprise.png' %}" alt="user" class="img_co_ls">
+                        </label>
+                        <input id="entreprise" type="text" name="entreprise" placeholder="Entreprise">
+                    </div>
+                    <div class="container_2 container_input">
+                        <label for="poste">
+                            <img src="{% static 'images/job.png' %}" alt="user" class="img_co_ls">
+                        </label>
+                        <input id="poste" type="text" name="poste" placeholder="Poste Actuel">
+                    </div>
+                    <div class="container_2 container_input">
+                        <label for="salaire">
+                            <img src="{% static 'images/money.png' %}" alt="user" class="img_co_ls">
+                        </label>
+                        <input id="salaire" type="number" name="salaire" placeholder="Salaire Brut Mensuel/€">
+                    </div>
+                    <div class="container_2 container_input">
+                        <label for="diplome">
+                            <img src="{% static 'images/diplome.png' %}" alt="user" class="img_co_ls">
+                        </label>
+                        <select name="diplome" id="diplome">
+                            <option value="bac+8">Doctorat</option>
+                            <option value="bac+5">Master</option>
+                            <option value="bac+3">Licence</option>
+                            <option value="bac+2">DUT/BTS</option>
+                            <option value="bacG">Baccalauréat Générale</option>
+                            <option value="bacP">Baccalauréat Professionnel</option>
+                        </select>
+                    </div>
+                </article>
+                <article>
+                    <div class="container_2 container_input">
+                        <label for="region">
+                            <img src="{% static 'images/france.png' %}" alt="user" class="img_co_ls">
+                        </label>
+                        <select name="region" id="region">
+                            <option value="01"> 01 Ain</option>
+                            <option value="02"> 02 Aisne</option>
+                            <option value="03"> 03 Allier </option>
+                            <option value="04">04 Alpes-de-Haute-Provence</option>
+                            <option value="05">05 Hautes-Alpes</option>
+                            <option value="06">06 Alpes-Maritimes</option>
+                            <option value="07">07 Ardèche</option>
+                            <option value="08">08 Ardennes</option>
+                            <option value="09">09 Ariège</option>
+                            <option value="10"> 10 Aube </option>
+                            <option value="11">11 Aude</option>
+                            <option value="12">12 Aveyron</option>
+                            <option value="13">13 Bouches-du-Rhône</option>
+                            <option value="14">14 Calvados</option>
+                            <option value="15">15 Cantal</option>
+                            <option value="16">17 Charente-Maritime</option>
+                            <option value="17">18 Cher</option>
+                            <option value="18">19 Corrèze</option>
+                            <option value="2A"> 2A Corse-du-Sud</option>
+                            <option value="2B"> 2B Haute-Corse
+                            <option value="21"> 21 Côte-d'Or</option>
+                            <option value="22"> 22 Côtes d'Armor</option>
+                            <option value=""> 23 Creuse</option>
+                            <option value=""> 24 Dordogne</option>
+                            <option value=""> 25 Doubs</option>
+                            <option value=""> 26 Drôme</option>
+                            <option value=""> 27 Eure</option>
+                            <option value=""> 28 Eure-et-Loir</option>
+                            <option value=""> 29 Finistère</option>
+                            <option value=""> 30 Gars</option>
+                            <option value="">31 Haute-Garonne</option>
+                            <option value="">32 Gers</option>
+                            <option value="">33 Gironde</option>
+                            <option value="">34 Hérault</option>
+                            <option value="">35 Ille-et-Vilaine</option>
+                            <option value="">36 Indre</option>
+                            <option value="">37 Indre-et-Loire</option>
+                            <option value="">38 Isère</option>
+                            <option value="">39 Jura</option>
+                            <option value="">40 Landes</option>
+                            <option value="">41 Loir-et-Cher</option>
+                            <option value="">42 Loire</option>
+                            <option value="">43 Haute-Loire</option>
+                            <option value="">44 Loire-Atlantique</option>
+                            <option value="">45 Loiret</option>
+                            <option value="">46 Lot</option>
+                            <option value="">47 Lot-et-Garonne</option>
+                            <option value="">48 Lozère</option>
+                            <option value="">49 Maine-et-Loire</option>
+                            <option value="">50 Manche</option>
+                            <option value="">51 Marne</option>
+                            <option value="">52 Haute-Marne</option>
+                            <option value="">53 Mayenne</option>
+                            <option value="">54 Meurthe-et-Moselle</option>
+                            <option value="">55 Meuse</option>
+                            <option value="">56 Morbihan</option>
+                            <option value="">57 Moselle</option>
+                            <option value="">58 Nièvre</option>
+                            <option value="">59 Nord</option>
+                            <option value="">50 Oise</option>
+                            <option value="">51 Orne</option>
+                            <option value="">52 Pas-de-Calais</option>
+                            <option value="">53 Puy-de-Dôme</option>
+                            <option value="">54 Pyrénées-Atlantiques</option>
+                            <option value="">55 Hautes-Pyrénées</option>
+                            <option value="">56 Pyrénées-Orientales</option>
+                            <option value="">57 Bas-Rhin</option>
+                            <option value="">58 Haut-Rhin</option>
+                            <option value="">59 Rhône</option>
+                            <option value="">70 Haute-Saône</option>
+                            <option value="">71 Saône-et-Loire</option>
+                            <option value="">72 Sarthe</option>
+                            <option value="">73 Savoie</option>
+                            <option value="">74 Haute-Savoie</option>
+                            <option value="">75 Paris</option>
+                            <option value="">76 Seine-Maritime</option>
+                            <option value="">77 Seine-et-Marne</option>
+                            <option value="">78 Yvelines</option>
+                            <option value="">79 Deux-Sèvres</option>
+                            <option value="">80 Somme</option>
+                            <option value="">81 Tarn</option>
+                            <option value="">82 Tarn-et-Garonne</option>
+                            <option value="">83 Var</option>
+                            <option value="">84 Vaucluse</option>
+                            <option value="">85 Vandée</option>
+                            <option value="">86 Vienne</option>
+                            <option value="">87 Haute-Vienne</option>
+                            <option value="">88 Vosges</option>
+                            <option value="">89 Yonne</option>
+                            <option value="">90 Territoire de Belfort</option>
+                            <option value="">91 Essonne</option>
+                            <option value="">92 Hauts-de-Seine</option>
+                            <option value="">93 Seine-St-Denis</option>
+                            <option value="">94 Val-de-Marne</option>
+                            <option value="">95 Val-D'Oise</option>
+                            <option value="">971 Guadeloupe</option>
+                            <option value="">972 Martinique</option>
+                            <option value="">973 Guyane</option>
+                            <option value="">974 La Réunion</option>
+                            <option value="">976 Mayotte</option>
+                        </select>
+                    </div>
+                    <div class="container_2 container_input">
+                        <label for="name">
+                            <img src="{% static 'images/name.png' %}" alt="user" class="img_co_ls">
+                        </label>
+                        <input id="name" type="text" name="name" placeholder="Prénom">
+                    </div>
+                    <div class="container_2 container_input">
+                        <label for="username">
+                            <img src="{% static 'images/user.png' %}" alt="user" class="img_co_ls">
+                        </label>
+                        <input id="username" type="text" name="username" placeholder="username">
+                    </div>
+                    <div class="container_2 container_input">
+                        <label for="password">
+                            <img src="{% static 'images/lock.png' %}" alt="lock" class="img_co_ls">
+                        </label>
+                        <input id="password" type="password" name="password" placeholder="password">
+                    </div>
+                </article>
+            </form>
+            <button type="submit" id="connnexionButt">S'inscrire</button>
+        </div>
+    </main>
+
 </body>
 
 </html>

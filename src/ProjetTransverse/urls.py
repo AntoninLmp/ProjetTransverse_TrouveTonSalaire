@@ -20,7 +20,8 @@ from ProjetTransverse.views import index, page
 from salaires.views import accueil_entreprise, entreprise_trouvee, orientation
 from ProjetTransverse import settings
 from django.conf.urls.static import static
-from accounts.views import signup,logout_user, login_user
+from accounts.views import signup, logout_user, login_user
+from Orientation.views import orientation
 
 urlpatterns = [
     path('', index, name="index"),

@@ -1,3 +1,4 @@
+{% load static %}
 <!DOCTYPE html>
 <html lang="fr">
 
@@ -5,23 +6,38 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>sign in</title>
+    <link rel="stylesheet" href="{% static 'css/accounts.css' %}">
+    <link rel="icon" href="{% static 'images/logo_website.png' %}">
+    <title>Connexion</title>
+
 </head>
 
 <body>
-    <h1>Connexion</h1>
-    <form method="POST">
-        {% csrf_token %}
-        <p>
-            <label for="username">Nom d'utilisateur</label>
-            <input id="username" type="text" name="username">
-        </p>
-        <p>
-            <label for="password">Mot de passe</label>
-            <input id="password" type="password" name="password">
-        </p>
-        <button type="submit">Connexion</button>
-    </form>
+    <main>
+        <div>
+            <img src="{% static 'images/desk_img.png' %}" alt="Images_ordinateur" id="img_co">
+        </div>
+        <div class="moduleCo2">
+            <h1>Connexion</h1>
+            <form method="POST">
+                {% csrf_token %}
+                <div class="container_2 container_connexion">
+                    <label for="username">
+                        <img src="{% static 'images/user.png' %}" alt="user" class="img_co_ls">
+                    </label>
+                    <input id="username" type="text" name="username" placeholder="username">
+                </div>
+                <div class="container_2 container_connexion">
+                    <label for="password">
+                        <img src="{% static 'images/lock.png' %}" alt="lock" class="img_co_ls">
+                    </label>
+                    <input id="password" type="password" name="password" placeholder="password">
+                </div>
+                <button type="submit" id="connnexionButt">Connexion</button>
+            </form>
+        </div>
+    </main>
+
 </body>
 
 </html>

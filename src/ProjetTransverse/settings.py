@@ -13,6 +13,8 @@ https://docs.djangoproject.com/en/4.0/ref/settings/
 import os
 from pathlib import Path
 from re import template
+from django.conf import settings
+from django.conf.urls.static import static
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
@@ -41,6 +43,7 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'salaires',
     'accounts',
+    'Orientation',
 ]
 
 MIDDLEWARE = [
@@ -122,13 +125,13 @@ USE_TZ = True
 STATIC_URL = 'static/'
 
 STATICFILES_DIRS = [
-    os.path.join(BASE_DIR,"ProjetTransverse/static")
-] 
+    os.path.join(BASE_DIR, "ProjetTransverse/static")
+]
 
 # Default primary key field type
 # https://docs.djangoproject.com/en/4.0/ref/settings/#default-auto-field
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 MEDIA_URL = "/media/"
-MEDIA_ROOT = BASE_DIR / "media" #dossier ou on import les photo en autre
+MEDIA_ROOT = BASE_DIR / "media"  # dossier ou on import les photo en autre
 AUTH_USER_MODEL = "accounts.utilisateur"
