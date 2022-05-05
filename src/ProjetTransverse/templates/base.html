@@ -12,8 +12,7 @@
 
     <link rel="stylesheet" href="{% static 'css/header.css' %}">
     <link rel="stylesheet" href="{% static 'css/footer.css' %} ">
-    <link rel="icon" href="{% static 'images/logo_website.png' %}">
-    {% block content1 %} {% endblock %}
+    <link rel="icon" href="{% static 'images/logo_website.png' %}"> {% block content1 %} {% endblock %}
 </head>
 
 <body>
@@ -25,7 +24,7 @@
             </a>
             <ul class="nav_list">
                 <li>
-                    <a href="#" class="navbar_header">Salaire</a>
+                    <a href="{% url 'salaire' %}" class="navbar_header">Salaire</a>
                 </li>
                 <li>
                     <a href="{% url 'accueil_entreprise' %}" class="navbar_header">Entreprise</a>
@@ -35,11 +34,9 @@
                 </li>
                 <li>
                     {% if user.is_authenticated %} {{ user.username }}
-                    <a href="{% url 'logout' %}">Déconnexion</a>
-                    {% else %}
+                    <a href="{% url 'logout' %}">Déconnexion</a> {% else %}
                     <a href="{% url 'login' %}">Connexion</a>
-                    <a href="{% url 'signup' %}">S'inscrire</a>
-                    {% endif %}
+                    <a href="{% url 'signup' %}">S'inscrire</a> {% endif %}
                 </li>
             </ul>
         </nav>
@@ -61,12 +58,9 @@
         </ul>
         <div class="footer_container">
             <p>© 2022, create by Antonin Lampin, Houda Zamani et Simon Martinenq</p>
-            <img src="https://webstockreview.net/images/instagram-clipart-black-and-white-15.png" alt="Instagram Logo"
-                class="footerImg">
-            <img src="https://www.shareicon.net/data/2016/07/14/607478_facebook_4096x4096.png" alt="Facebook logo"
-                class="footerImg">
-            <img src="https://sguru.org/wp-content/uploads/2018/02/linkedin-png-linkedin-icon-1600.png"
-                alt="Linkedin Logo" class="footerImg">
+            <img src="https://webstockreview.net/images/instagram-clipart-black-and-white-15.png" alt="Instagram Logo" class="footerImg">
+            <img src="https://www.shareicon.net/data/2016/07/14/607478_facebook_4096x4096.png" alt="Facebook logo" class="footerImg">
+            <a href="https://www.linkedin.com/company/projet-transverse"><img src="https://sguru.org/wp-content/uploads/2018/02/linkedin-png-linkedin-icon-1600.png" alt="Linkedin Logo" class="footerImg"></a>
         </div>
     </footer>
 </body>

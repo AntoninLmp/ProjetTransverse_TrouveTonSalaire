@@ -1,15 +1,16 @@
-{% extends 'base.html' %}
-{% load static %}
-{% block content1 %}
+{% extends 'base.html' %} {% load static %} {% block content1 %}
 <link rel="stylesheet" href="{% static 'css/styleEntreprise.css' %}">
 <title>Entreprise</title>
+{% endblock %} {% block content2 %}
+<div id="liste_ent">
+    <h1> Entreprise</h1>
+    {% for ent in entreprises %}
+    <div>
+        <h2> {{ent.nom}}</h2>
+        <p>{{ent.description}}</p>
+        <img src="{{ent.logo}}" alt="{{ent.nom}}">
+        <a href="{{ ent.get_absolute_url }}"> voir l'entreprises</a>
+    </div>
+    {% endfor %}
+</div>
 {% endblock %}
-
-{% block content2 %}
-<h1> Entreprise</h1>
-{% for ent in entreprises %}
-<p> {{ent.nom}}</p>
-
-<a href="{{ ent.get_absolute_url }}"> voir l'entreprises</a>
-
-<img src="{{ent.logo.url}}" alt="{{ent.nom}}"> {% endfor %} {% endblock %}

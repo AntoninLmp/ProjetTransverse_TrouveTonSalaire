@@ -22,15 +22,16 @@ from ProjetTransverse import settings
 from django.conf.urls.static import static
 from accounts.views import signup, logout_user, login_user
 from Orientation.views import orientation
+from entreprise.views import salaire
 
 urlpatterns = [
     path('', index, name="index"),
     path('admin/', admin.site.urls),
-    #path('page<int:numero_page>/', page),
     path('entreprise/',accueil_entreprise, name="accueil_entreprise"),
     path('entreprise/<str:slug>/',entreprise_trouvee, name="entreprise_trouvee"),
     path('signup/',signup, name="signup"),
     path('logout/',logout_user, name="logout"),
     path('login/',login_user, name="login"),
     path('orientation/',orientation, name="orientation"),
+    path('salaire/',salaire, name="salaire"),
 ]+ static(settings.MEDIA_URL,document_root = settings.MEDIA_ROOT)

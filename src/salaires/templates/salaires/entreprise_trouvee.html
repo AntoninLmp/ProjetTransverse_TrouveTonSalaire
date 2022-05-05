@@ -4,6 +4,7 @@
 {% endblock %} {% block content2 %}
 
 
-<p> nom : {{entreprise.nom}}</p>
-
-<img src="{{entreprise.logo.url}}" alt="{{entreprise.nom}}"> {% endblock %}
+<h2> {{entreprise.nom}}</h2>
+<p>{{entreprise.description}}</p>
+<img src="{{entreprise.logo}}" alt="{{entreprise.nom}}">
+<a href="{{ entreprise.site_web }}"> site web </a> {% endblock %}
