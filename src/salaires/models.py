@@ -1,4 +1,3 @@
-from pyexpat import model
 from django.db import models
 from django.urls import reverse
 
@@ -16,6 +15,5 @@ class Entreprise(models.Model):
     def __str__(self):
         return self.nom
 
-    ''' def get_absolute_url(self):
-        return reverse("salaire", kwargs={"slug": self.slug})
- '''
+    def get_absolute_url(self):
+        return reverse("entreprise_trouvee", kwargs={"slug": self.slug})
