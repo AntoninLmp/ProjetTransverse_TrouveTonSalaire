@@ -1,0 +1,48 @@
+img {
+    width: 100px;
+}
+
+main {
+    display: flex;
+    background-color: #f8f3ec;
+}
+
+
+.navbar_entreprise {
+    border-radius: 10px;
+    background-color: white;
+    margin: 2em;
+    font-size: 1em;
+}
+
+.sizenav {
+    width: 20%;
+}
+
+.sizearticle {
+    width: 60%;
+}
+
+#info_t1 {
+    text-align: center;
+    font-family: 'Arvo';
+    font-size: 1em;
+    border-bottom: 1px solid grey;
+}
+
+.info_t2 {
+    font-size: 1em;
+    font-family: 'Times New Roman', Times, serif;
+    font-weight: 300;
+    padding-left: 10%;
+}
+
+.info_t2 a {
+    text-decoration: none;
+    color: #1D5C63;
+}
+
+.imgBannier {
+    width: 100%;
+    height: auto;
+}
