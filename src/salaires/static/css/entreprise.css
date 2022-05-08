@@ -7,6 +7,9 @@ main {
     background-color: #f8f3ec;
 }
 
+.flex {
+    display: flex;
+}
 
 .navbar_entreprise {
     border-radius: 10px;
@@ -43,7 +46,35 @@ main {
     color: #1D5C63;
 }
 
-.imgBannier {
+.bannier {
     width: 100%;
-    height: auto;
+    height: 25em;
+    max-height: 200px;
+    background-image: url("http://wallpaperheart.com/wp-content/uploads/2018/04/HD-Wallpaper-Pictures-hd-walpaper.jpg");
+    border-radius: 10px 10px 0 0;
+}
+
+.logoEntr {
+    background-color: white;
+    position: relative;
+    width: 100px;
+    height: 100px;
+    top: -50px;
+    left: 50px;
+    border: 1px double grey;
+    display: grid;
+    align-content: center;
+}
+
+.descrip {
+    position: relative;
+    top: -10%;
+    margin-left: 2em;
+}
+
+.bulles {
+    border-radius: 10px;
+    background-color: #1f93a0;
+    padding: 0.3em;
+    margin-right: 0.8em;
 }
