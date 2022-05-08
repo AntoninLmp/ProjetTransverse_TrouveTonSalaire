@@ -11,7 +11,15 @@
 {% block content2 %}
 <!-- MAIN HOME PAGE -->
 
+<h1> Salaire</h1>
+    {% for sal in salaires %}
+    <div>
+        <h2> {{sal.libelle}}</h2>
+        <p>{{sal.departement}}</p>
+        <p>{{sal.salaire}}</p>
+    </div>
 
+    {% endfor %}
 
 
 {% endblock %}
