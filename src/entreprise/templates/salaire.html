@@ -2,19 +2,19 @@
 
 <!-- Head of page -->
 {% block content1 %}
-
-<title>Salaire</title>
 <link rel="stylesheet" href="{% static 'css/salaire.css' %}"> {% endblock %} {% block content2 %}
+<title>Salaire</title>
 <!-- MAIN HOME PAGE -->
 
 <h1> Salaire</h1>
-<div id="salaire_list">
+<div class="salaire_list">
     {% for sal in salaires %}
-    <div id="salaire_div">
+    <div class="salaire_div">
         <h2> {{sal.libelle}}</h2>
         <p>{{sal.departement}}</p>
-        <p>{{sal.salaire}}€</p>
+        <p class="grandeTaille">{{sal.salaire}}€</p>
     </div>
+    {% endfor %}
 </div>
 
-{% endfor %} {% endblock %}
+{% endblock %}

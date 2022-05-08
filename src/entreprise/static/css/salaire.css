@@ -1,9 +1,24 @@
+main {
+    padding-top: 3%;
+    padding-left: 6%;
+    padding-right: 6%;
+}
+
 .salaire_list {
-    display: flex;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
 }
 
 .salaire_div {
-    align-items: center;
-    border: solid black;
-    border-radius: 1em;
+    border: solid grey 1px;
+    border-radius: 10px;
+    margin: 2%;
+    padding: 2%;
+    padding-left: 5%;
+    box-shadow: 0px 0px 5px grey;
+}
+
+.grandeTaille {
+    font-size: 250%;
+    font-weight: bolder;
 }
