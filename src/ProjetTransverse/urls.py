@@ -17,12 +17,13 @@ Including another URLconf
 from django.contrib import admin
 from django.urls import path
 from ProjetTransverse.views import index, page
-from salaires.views import accueil_entreprise, entreprise_trouvee, orientation
+from salaires.views import accueil_entreprise, entreprise_trouvee
 from ProjetTransverse import settings
 from django.conf.urls.static import static
 from accounts.views import signup, logout_user, login_user
 from Orientation.views import orientation
 from entreprise.views import salaire, profile_trouve
+
 
 urlpatterns = [
     path('', index, name="index"),
