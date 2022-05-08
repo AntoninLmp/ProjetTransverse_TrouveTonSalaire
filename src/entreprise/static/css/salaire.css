@@ -1,0 +1,9 @@
+.salaire_list {
+    display: flex;
+}
+
+.salaire_div {
+    align-items: center;
+    border: solid black;
+    border-radius: 1em;
+}
