@@ -1,15 +1,18 @@
-{% extends 'base.html' %}
-{% load static %}
+{% extends 'base.html' %} {% load static %}
 
 <!-- Head of page -->
 {% block content1 %}
+<link rel="stylesheet" href="{% static 'css/salaire.css' %}">
+<title>{{profile.libelle}}</title>
 
-<title>Profile</title>
-
-{% endblock %}
-
-{% block content2 %}
+{% endblock %} {% block content2 %}
 <!-- MAIN HOME PAGE -->
+
+<div>
+    <h2> {{profile.libelle}}</h2>
+    <p>{{profile.departement}}</p>
+    <p>{{profile.salaire}}€</p>
+</div>
 
 
 

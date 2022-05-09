@@ -5,7 +5,6 @@
 <link rel="stylesheet" href="{% static 'css/salaire.css' %}"> {% endblock %} {% block content2 %}
 <title>Salaire</title>
 <!-- MAIN HOME PAGE -->
-
 <div>
     <h1>Salaire pour un poste donné</h1>
     <form method="POST">
@@ -23,12 +22,14 @@
 </div>
 <h1>Proposition de salaire</h1>
 <div class="salaire_list">
-    {% for sal in salaires %}
+    {% for p in postes %}
     <div class="salaire_div">
-        <h2> {{sal.libelle}}</h2>
-        <p>{{sal.departement}}</p>
-        <p class="grandeTaille">{{sal.salaire}}€</p>
+        <h2> {{p.libelle}}</h2>
+        <p>{{p.departement}}</p>
+        <p class="grandeTaille">{{p.salaire}}€</p>
+        <a href="{{ p.get_absolute_url }}"> voir l'entreprises</a>
     </div>
+
     {% endfor %}
 </div>
 

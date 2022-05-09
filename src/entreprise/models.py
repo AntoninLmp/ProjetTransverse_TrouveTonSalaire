@@ -1,3 +1,4 @@
+from pyexpat import model
 from django.db import models
 from django.urls import reverse
 # Create your models here.
@@ -11,7 +12,7 @@ class Profile(models.Model):
     slug = models.SlugField(max_length=128)# identifiant nom sans espace maj etc...
 
     def __str__(self):
-        return self.nom
+        return self.libelle
 
     def get_absolute_url(self):
         return reverse("profile_trouve", kwargs={"slug": self.slug})
