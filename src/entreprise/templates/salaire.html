@@ -6,7 +6,22 @@
 <title>Salaire</title>
 <!-- MAIN HOME PAGE -->
 
-<h1> Salaire</h1>
+<div>
+    <h1>Salaire pour un poste donné</h1>
+    <form method="POST">
+        {% csrf_token %}
+        <div>
+            <label for="jobTitle"></label>
+            <input id="jobTitle" type="text" name="jobTitle" placeholder="Salaire pour un job">
+        </div>
+        <div>
+            <label for="villeJob"></label>
+            <input id="villeJob" type="text" name="villeJob" placeholder="Paris">
+        </div>
+        <button type="submit">Rechercher</button>
+    </form>
+</div>
+<h1>Proposition de salaire</h1>
 <div class="salaire_list">
     {% for sal in salaires %}
     <div class="salaire_div">
