@@ -9,7 +9,8 @@ def signup(request):
     if request.method == "POST":
         username = request.POST.get("username")
         password = request.POST.get("password")
-        user = User.objects.create_user(username=username,password=password)
+        salaire = request.POST.get("salaire")
+        user = User.objects.create_user(username=username,password=password,salaire=salaire)
         login(request,user)
         return redirect('index')
     return render(request, "accounts/signup.html")
@@ -28,3 +29,6 @@ def login_user(request):
 def logout_user(request):
     logout(request)
     return redirect('index')
+
+def compte(request):
+    return render(request,"accounts/information_perso.html")

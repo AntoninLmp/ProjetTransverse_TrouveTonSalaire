@@ -19,6 +19,7 @@
         <div class="moduleCo pos1">
             <h1>S'inscrire</h1>
             <form method="POST" id="form_1">
+                {% csrf_token %}
                 <article>
                     <div class="container_2 container_input">
                         <label for="entreprise">
@@ -36,7 +37,7 @@
                         <label for="salaire">
                             <img src="{% static 'images/money.png' %}" alt="user" class="img_co_ls">
                         </label>
-                        <input id="salaire" type="number" name="salaire" placeholder="Salaire Brut Mensuel/€">
+                        <input id="salaire" type="number" name="salaire" placeholder="Salaire Brut annuel/€">
                     </div>
                     <div class="container_2 container_input">
                         <label for="diplome">
@@ -179,8 +180,8 @@
                         <input id="password" type="password" name="password" placeholder="password">
                     </div>
                 </article>
+                <button type="submit" id="connnexionButt">S'inscrire</button>
             </form>
-            <button type="submit" id="connnexionButt">S'inscrire</button>
         </div>
     </main>
 

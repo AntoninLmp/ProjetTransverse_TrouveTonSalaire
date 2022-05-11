@@ -46,9 +46,15 @@ body {
     padding: 1.4em;
 }
 
+#img_user {
+    width: 3em;
+    padding: 1.4em;
+}
+
 .displayFlex {
     display: flex;
 }
+
 
 /* QUESTIONNAIRE */
 
