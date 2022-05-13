@@ -8,4 +8,5 @@ class utilisateur(AbstractUser):
     diplome = models.CharField(max_length=300)
     departement = models.CharField(max_length=300)
     entreprise = models.CharField(max_length=300)
+    mail = models.EmailField()
     pass

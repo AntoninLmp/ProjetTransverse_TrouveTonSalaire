@@ -1,3 +1,4 @@
+import email
 from django.shortcuts import redirect, render
 from django.contrib.auth import get_user_model, login, logout, authenticate
 
@@ -15,7 +16,7 @@ def signup(request):
         departement = request.POST.get("region")
         entreprise = request.POST.get("entreprise")
         user = User.objects.create_user(username=username,password=password,salaire=salaire,
-                                        poste=poste,diplome=diplome,departement=departement,entreprise=entreprise)
+                                        poste=poste,diplome=diplome,departement=departement,entreprise=entreprise,email=email)
         login(request,user)
         return redirect('index')
     return render(request, "accounts/signup.html")
