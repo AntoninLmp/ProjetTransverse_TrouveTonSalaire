@@ -1,0 +1,29 @@
+{% extends 'base.html' %} {% load static %}
+
+<!-- HEAD PART -->
+{% block content1 %}
+
+<title>Mon compte</title>
+<link rel="stylesheet" href=" {% static 'css/accounts.css' %} "> {% endblock %}
+
+<!-- MAIN -->
+{% block content2 %}
+<div>
+    <div>
+        <img src="{% static 'images/desk_img.png' %}" alt="Images_ordinateur" id="img_co">
+    </div>
+    <div class="moduleCo2">
+        <h1>Mes informations personnel</h1>
+        <p>Nom d'utilisateur : {{user.username}}</p>
+        <p>Email : {{user.email}}</p>
+        <p>Entreprise : {{user.entreprise}}</p>
+        <p>Poste acutuel : {{user.poste}}</p>
+        <p>Salaire : {{user.salaire}}</p>
+        <p>Diplôme : {{user.diplome}}</p>
+        <p>Departement : {{user.departement}}</p>
+        <a href="{% url 'logout' %}">Deconnexion</a>
+    </div>
+</div>
+
+
+{% endblock %}

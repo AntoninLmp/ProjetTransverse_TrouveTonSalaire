@@ -1,0 +1,27 @@
+{% extends 'base.html' %} {% load static %}
+
+<!-- Head of page -->
+{% block content1 %}
+<link rel="stylesheet" href="{% static 'css/salaire.css' %}">
+<title>{{profile.libelle}}</title>
+
+{% endblock %} {% block content2 %}
+<!-- MAIN HOME PAGE -->
+
+<div>
+    <h1> {{profile.libelle}}</h1>
+    <p>{{profile.description_courte}}</p>
+    <h2>Description du métier</h2>
+    <p>{{profile.description}}</p>
+    <h2>Etude / Formation</h2>
+    <p>{{profile.etudes}}</p>
+    <h2>Salaire</h2>
+    <p>{{profile.salaire}}</p>
+    <h2>Evolution de carrière</h2>
+    <p>{{profile.evolution_carriere}}</p>
+</div>
+
+
+
+
+{% endblock %}

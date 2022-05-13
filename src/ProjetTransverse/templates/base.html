@@ -1,0 +1,69 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Arvo:wght@700&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="{% static 'css/header.css' %}">
+    <link rel="stylesheet" href="{% static 'css/footer.css' %} ">
+    <link rel="icon" href="{% static 'images/logo_website.png' %}"> {% block content1 %} {% endblock %}
+</head>
+
+<body>
+    <!-- HEADER FOR ALL PEAGES -->
+    <header>
+        <nav class="displayFlex nav_header">
+            <a href="{% url 'index' %}">
+                <img src="{% static 'images/logo_website.png' %}" alt="Logo" id="img_logo">
+            </a>
+            <ul class="nav_list">
+                <li>
+                    <a href="{% url 'salaire' %}" class="navbar_header">Salaire</a>
+                </li>
+                <li>
+                    <a href="{% url 'accueil_entreprise' %}" class="navbar_header">Entreprise</a>
+                </li>
+                <li>
+                    <a href="{% url 'orientation' %}" class="navbar_header">Orientation</a>
+                </li>
+                <li>
+                    {% if user.is_authenticated %}
+                    <a href="{% url 'compte' %}">{{user.username}}</a>{% else %}
+
+                    <a href="{% url 'login' %}">Connexion</a>
+                    <a href="{% url 'signup' %}">S'inscrire</a> {% endif %}
+                </li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        {% block content2 %} {% endblock %}
+    </main>
+    <footer class="displayFlex">
+        <ul class="displayFlex">
+            <li>
+                <a href="#" class="footer-link">Accueil</a>
+            </li>
+            <li>
+                <a href="#" class="footer-link">A propos</a>
+            </li>
+            <li>
+                <a href="#" class="footer-link">Salaire</a>
+            </li>
+        </ul>
+        <div class="footer_container">
+            <p>© 2022, create by Antonin Lampin, Houda Zamani et Simon Martinenq</p>
+            <img src="https://webstockreview.net/images/instagram-clipart-black-and-white-15.png" alt="Instagram Logo" class="footerImg">
+            <img src="https://www.shareicon.net/data/2016/07/14/607478_facebook_4096x4096.png" alt="Facebook logo" class="footerImg">
+            <a href="https://www.linkedin.com/company/projet-transverse"><img src="https://sguru.org/wp-content/uploads/2018/02/linkedin-png-linkedin-icon-1600.png" alt="Linkedin Logo" class="footerImg"></a>
+        </div>
+    </footer>
+</body>
+
+</html>
