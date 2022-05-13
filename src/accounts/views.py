@@ -10,7 +10,12 @@ def signup(request):
         username = request.POST.get("username")
         password = request.POST.get("password")
         salaire = request.POST.get("salaire")
-        user = User.objects.create_user(username=username,password=password)
+        poste = request.POST.get("poste")
+        diplome = request.POST.get("diplome")
+        departement = request.POST.get("region")
+        entreprise = request.POST.get("entreprise")
+        user = User.objects.create_user(username=username,password=password,salaire=salaire,
+                                        poste=poste,diplome=diplome,departement=departement,entreprise=entreprise)
         login(request,user)
         return redirect('index')
     return render(request, "accounts/signup.html")
