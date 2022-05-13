@@ -34,7 +34,7 @@
                 </li>
                 <li>
                     {% if user.is_authenticated %}
-                    <a href="{% url 'compte' %}">logoUser</a>{% else %}
+                    <a href="{% url 'compte' %}">{{user.username}}</a>{% else %}
 
                     <a href="{% url 'login' %}">Connexion</a>
                     <a href="{% url 'signup' %}">S'inscrire</a> {% endif %}
