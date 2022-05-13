@@ -4,8 +4,7 @@ from django.contrib.auth.models import AbstractUser
 
 class utilisateur(AbstractUser):
     salaire = models.IntegerField()
-    ''' poste = models.CharField(max_length=300)
-    salaire = models.CharField(max_length=300)
+    poste = models.CharField(max_length=300)
     diplome = models.CharField(max_length=300)
-    departement = models.CharField(max_length=300) '''
+    departement = models.CharField(max_length=300)
     pass
