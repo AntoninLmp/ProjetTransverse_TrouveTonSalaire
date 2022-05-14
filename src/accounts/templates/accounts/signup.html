@@ -25,25 +25,25 @@
                         <label for="entreprise">
                             <img src="{% static 'images/entreprise.png' %}" alt="user" class="img_co_ls">
                         </label>
-                        <input id="entreprise" type="text" name="entreprise" placeholder="Entreprise">
+                        <input id="entreprise" type="text" name="entreprise" placeholder="Entreprise" required>
                     </div>
                     <div class="container_2 container_input">
                         <label for="poste">
                             <img src="{% static 'images/job.png' %}" alt="user" class="img_co_ls">
                         </label>
-                        <input id="poste" type="text" name="poste" placeholder="Poste Actuel">
+                        <input id="poste" type="text" name="poste" placeholder="Poste Actuel" required>
                     </div>
                     <div class="container_2 container_input">
                         <label for="salaire">
                             <img src="{% static 'images/money.png' %}" alt="user" class="img_co_ls">
                         </label>
-                        <input id="salaire" type="number" name="salaire" placeholder="Salaire Brut annuel/€">
+                        <input id="salaire" type="number" name="salaire" placeholder="Salaire Brut annuel/€" required>
                     </div>
                     <div class="container_2 container_input">
                         <label for="diplome">
                             <img src="{% static 'images/diplome.png' %}" alt="user" class="img_co_ls">
                         </label>
-                        <select name="diplome" id="diplome">
+                        <select name="diplome" id="diplome" class="sizeSP">
                             <option value="bac+8">Doctorat</option>
                             <option value="bac+5">Master</option>
                             <option value="bac+3">Licence</option>
@@ -58,7 +58,7 @@
                         <label for="region">
                             <img src="{% static 'images/france.png' %}" alt="user" class="img_co_ls">
                         </label>
-                        <select name="region" id="region">
+                        <select name="region" id="region" class="sizeSP">
                             <option value="01"> 01 Ain</option>
                             <option value="02"> 02 Aisne</option>
                             <option value="03"> 03 Allier </option>
@@ -165,23 +165,23 @@
                         <label for="name">
                             <img src="{% static 'images/name.png' %}" alt="user" class="img_co_ls">
                         </label>
-                        <input id="name" type="text" name="name" placeholder="Prénom">
+                        <input id="name" type="text" name="name" placeholder="Prénom" required>
                     </div>
                     <div class="container_2 container_input">
                         <label for="username">
                             <img src="{% static 'images/user.png' %}" alt="user" class="img_co_ls">
                         </label>
-                        <input id="username" type="text" name="username" placeholder="username">
+                        <input id="username" type="text" name="username" placeholder="username" required>
                     </div>
                     <div class="container_2 container_input">
                         <label for="password">
                             <img src="{% static 'images/lock.png' %}" alt="lock" class="img_co_ls">
                         </label>
-                        <input id="password" type="password" name="password" placeholder="password">
+                        <input id="password" type="password" name="password" placeholder="password" required>
                     </div>
                 </article>
-                <button type="submit" id="connnexionButt">S'inscrire</button>
             </form>
+            <button type="submit" id="connnexionButt">S'inscrire</button>
         </div>
     </main>
 
