@@ -3,6 +3,8 @@ body {
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
+
+
 main {
     display: flex;
     justify-content: space-evenly;
@@ -107,4 +109,16 @@ select {
 
 button {
     margin: 15px 0;
+}
+
+.sizeSP {
+    width: 175px;
+}
+
+@media screen and (max-width: 1046px) {
+    .img_co_ls {
+        position: relative;
+        margin-bottom: 5%;
+    }
+
 }
