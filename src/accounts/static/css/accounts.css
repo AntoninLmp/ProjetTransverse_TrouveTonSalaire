@@ -120,5 +120,25 @@ button {
         position: relative;
         margin-bottom: 5%;
     }
+}
 
+@media screen and (max-width: 730px) {
+    main {
+        display: block;
+        margin: 15% 28%;
+    }
+
+    #img_co {
+        margin-bottom: 2em;
+    }
+
+    .pos1 {
+        position: relative;
+        top: 0;
+    }
+
+    .moduleCo {
+        width: 500px;
+        margin-left: -50%;
+    }
 }
