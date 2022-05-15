@@ -1,10 +1,51 @@
-{% extends 'base.html' %} {% load static %} {% block content1 %}
-<link rel="stylesheet" href="{% static 'css/styleEntreprise.css' %}">
+{% extends 'base.html' %}
+{% load static %}
+
+{% block content1 %}
+<link rel="stylesheet" href="{% static 'css/entreprise_trouvee.css' %}">
 <title>{{entreprise.nom}}</title>
-{% endblock %} {% block content2 %}
+{% endblock %}
+
+{% block content2 %}
+
+<aside class="navbar_entreprise sizenav">
+    <div>
+        <h1 id="info_t1">Informations</h1>
+    </div>
+    <div class="info_t2">
+        <p>
+            <a href="">Nom entreprise</a>
+        </p>
+        <p>
+            <a href="">Genre</a>
+        </p>
+        <p>
+            <a href="">Domaines</a>
+        </p>
+    </div>
+</aside>
+
+<article class="navbar_entreprise sizearticle">
+    <div class="bannier">
+        <!-- <img src="http://wallpaperheart.com/wp-content/uploads/2018/04/HD-Wallpaper-Pictures-hd-walpaper.jpg" alt=""> -->
+    </div>
+    <div class="logoEntr">
+        <img src="{{entreprise.logo}}" alt="{{entreprise.nom}}">
+    </div>
+    <div class="descrip">
+        <h1> {{entreprise.nom}}</h1>
+        <p>{{entreprise.description}}</p>
+        <div class="flex">
+            <div class="bulles"><a href="{{ entreprise.site_web }}">Site Web</a></div>
+            <div class="bulles">Suivre</div>
+            <div class="bulles">Comparer</div>
+        </div>
+    </div>
+
+    <!-- <h2> {{entreprise.nom}}</h2> -->
+    <!-- <p>{{entreprise.description}}</p> -->
+    <!-- <img src="{{entreprise.logo}}" alt="{{entreprise.nom}}"> -->
+    <!-- <a href="{{ entreprise.site_web }}"> site web </a> -->
 
 
-<h2> {{entreprise.nom}}</h2>
-<p>{{entreprise.description}}</p>
-<img src="{{entreprise.logo}}" alt="{{entreprise.nom}}">
-<a href="{{ entreprise.site_web }}"> site web </a> {% endblock %}
+    {% endblock %}
