@@ -3,8 +3,8 @@
 *.log
 *.pot
 *.pyc
-*cpython-310.pyc
-__pycache__\
+*__init__.cpython-310.pyc
+__pycache__/
 local_settings.py
 db.sqlite3
 media
