@@ -118,3 +118,14 @@ button {
     font-family: fantasy;
     color: #417D7A;
 }
+
+.displayFlex {
+    display: flex;
+}
+
+.ligne {
+    width: 33%;
+    margin: 2% 1%;
+    height: 5px;
+    background-color: black;
+}
