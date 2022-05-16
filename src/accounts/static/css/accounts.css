@@ -3,8 +3,6 @@ body {
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
-
-
 main {
     display: flex;
     justify-content: space-evenly;
@@ -47,8 +45,15 @@ select {
     top: -6px;
 }
 
-#form_1 {
+.displayFlex {
     display: flex;
+}
+
+.div_champs {
+    justify-content: space-evenly;
+}
+
+#form_1 {
     justify-content: space-evenly;
 }
 
