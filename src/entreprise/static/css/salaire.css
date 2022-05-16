@@ -89,3 +89,32 @@ button {
     margin-left: 5%;
     /* text-transform: uppercase; */
 }
+
+#job_img {
+    width: 15%;
+    position: absolute;
+    top: 200px;
+    left: 75%;
+}
+
+.phrases {
+    margin: 2% 15%;
+    border-radius: 15px;
+    background-color: #f8f3ec;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+}
+
+.phrases p {
+    color: #417D7A;
+    font-size: 1.5em;
+    padding: 0.5em;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+}
+
+#phrases_h1 {
+    text-align: center;
+    font-family: fantasy;
+    color: #417D7A;
+}
