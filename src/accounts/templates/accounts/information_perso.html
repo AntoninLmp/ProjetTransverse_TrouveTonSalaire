@@ -8,7 +8,7 @@
 
 <!-- MAIN -->
 {% block content2 %}
-<div>
+<article>
     <div>
         <img src="{% static 'images/desk_img.png' %}" alt="Images_ordinateur" id="img_co">
     </div>
@@ -23,7 +23,7 @@
         <p>Departement : {{user.departement}}</p>
         <a href="{% url 'logout' %}">Deconnexion</a>
     </div>
-</div>
+</article>
 
 
 {% endblock %}
