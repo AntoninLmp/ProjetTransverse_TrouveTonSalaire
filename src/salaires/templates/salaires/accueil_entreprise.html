@@ -1,16 +1,26 @@
-{% extends 'base.html' %} {% load static %} {% block content1 %}
+{% extends 'base.html' %}
+{% load static %}
+
+{% block content1 %}
 <link rel="stylesheet" href="{% static 'css/styleEntreprise.css' %}">
 <title>Entreprise</title>
-{% endblock %} {% block content2 %}
-<div id="liste_ent">
+{% endblock %}
+
+
+{% block content2 %}
+<article id="liste_ent">
     <h1> Entreprise</h1>
-    {% for ent in entreprises %}
-    <div>
-        <h2> {{ent.nom}}</h2>
-        <p>{{ent.description}}</p>
-        <img src="{{ent.logo}}" alt="{{ent.nom}}">
-        <a href="{{ ent.get_absolute_url }}"> voir l'entreprises</a>
+    <div class="container_tt_entreprise">
+        {% for ent in entreprises %}
+        <div class="container_1_entreprise">
+            <h2> {{ent.nom}}</h2>
+            <p>{{ent.description}}</p>
+            <img src="{{ent.logo}}" alt="{{ent.nom}}">
+            <p>
+                <a href="{{ ent.get_absolute_url }}"> Voir l'Entreprise</a>
+            </p>
+        </div>
+        {% endfor %}
     </div>
-    {% endfor %}
-</div>
+</article>
 {% endblock %}

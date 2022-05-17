@@ -2,34 +2,50 @@
 
 <!-- Head of page -->
 {% block content1 %}
-<link rel="stylesheet" href="{% static 'css/salaire.css' %}"> {% endblock %} {% block content2 %}
+<link rel="stylesheet" href="{% static 'css/salaire.css' %}">
 <title>Salaire</title>
+{% endblock %} {% block content2 %}
+
 <!-- MAIN HOME PAGE -->
-<div>
-    <h1>Salaire pour un poste donné</h1>
+<!-- <img src="{% static 'images/ordinateur.png' %}" alt="ordinateur" id="ordinateur"> -->
+<article class="recherche">
+    <h1 class="pad_rec">Trouve ton job</h1>
     <form method="POST">
         {% csrf_token %}
-        <div>
+        <div class="pad_rec_2">
             <label for="jobTitle"></label>
-            <input id="jobTitle" type="text" name="jobTitle" placeholder="Salaire pour un job">
+            <input id="jobTitle" type="text" name="jobTitle" placeholder="Métier (DataScientist...)">
         </div>
-        <div>
+        <div class="pad_rec_2">
             <label for="villeJob"></label>
-            <input id="villeJob" type="text" name="villeJob" placeholder="Paris">
+            <input id="villeJob" type="text" name="villeJob" placeholder="Ville">
         </div>
         <button type="submit">Rechercher</button>
     </form>
-</div>
-<h1>Proposition de salaire</h1>
-<div class="salaire_list">
-    {% for p in postes %}
-    <div class="salaire_div">
-        <h2> {{p.libelle}}</h2>
-        <p>{{p.salaire}}</p>
-        <a href="{{ p.get_absolute_url }}"> voir l'entreprises</a>
-    </div>
+    <img src="{% static 'images/job_2.png' %}" alt="job" id="job_img">
+</article>
+<h1 id="phrases_h1">Les questions qu'on se pose tous...</h1>
+<article class="phrases">
+    <p>Est-ce que je peux espérer demander plus ?</p>
+    <p>Suis-je sous-payé ?</p>
+    <p>Mes collegues gagnent-ils le même salaire que moi ?</p>
+</article>
+<article class="resultat_salaire">
+    <!-- <div class="displayFlex">
+        <hr class="ligne"> -->
+    <h1>Proposition de salaire</h1>
+    <!-- <hr class="ligne">
+    </div> -->
+    <div class="salaire_list">
+        {% for p in postes %}
+        <div class="salaire_div">
+            <h2> {{p.libelle}}</h2>
+            <p>{{p.salaire}}</p>
+            <a href="{{ p.get_absolute_url }}"> Voir l'Entreprise</a>
+        </div>
 
-    {% endfor %}
-</div>
+        {% endfor %}
+    </div>
+</article>
 
 {% endblock %}

@@ -2,24 +2,43 @@
 
 <!-- Head of page -->
 {% block content1 %}
-<link rel="stylesheet" href="{% static 'css/salaire.css' %}">
+<link rel="stylesheet" href="{% static 'css/profil_trouvee.css' %}">
 <title>{{profile.libelle}}</title>
 
 {% endblock %} {% block content2 %}
 <!-- MAIN HOME PAGE -->
 
-<div>
-    <h1> {{profile.libelle}}</h1>
-    <p>{{profile.description_courte}}</p>
-    <h2>Description du métier</h2>
-    <p>{{profile.description}}</p>
-    <h2>Etude / Formation</h2>
-    <p>{{profile.etudes}}</p>
-    <h2>Salaire</h2>
-    <p>{{profile.salaire}}</p>
-    <h2>Evolution de carrière</h2>
-    <p>{{profile.evolution_carriere}}</p>
-</div>
+<article>
+    <div class="container_b entete_PF">
+        <h1> {{profile.libelle}}</h1>
+        <p>{{profile.description_courte}}</p>
+    </div>
+    <div class="container_b">
+        <h2>Description du métier</h2>
+        <p>{{profile.description}}</p>
+    </div>
+    <div class="container_b">
+        <div class="displayFlex">
+            <img src="{% static 'images/bureau.png' %}" alt="etudes">
+            <h2>Etude / Formation</h2>
+        </div>
+        <p>{{profile.etudes}}</p>
+    </div>
+    <div class="container_b">
+        <div class="displayFlex">
+            <img src="{% static 'images/argent.png' %}" alt="Salaire">
+            <h2>Salaire</h2>
+        </div>
+        <p>{{profile.salaire}}</p>
+    </div>
+    <div class="container_b">
+        <div class="displayFlex">
+            <img src="{% static 'images/evolution.png' %}" alt="Evolution">
+            <h2>Evolution de carrière</h2>
+        </div>
+        <p>{{profile.evolution_carriere}}</p>
+    </div>
+</article>
 
 
 

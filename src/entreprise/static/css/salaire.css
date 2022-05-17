@@ -1,7 +1,7 @@
 main {
-    padding-top: 3%;
+    /* padding-top: 3%;
     padding-left: 6%;
-    padding-right: 6%;
+    padding-right: 6%; */
 }
 
 .salaire_list {
@@ -21,4 +21,111 @@ main {
 .grandeTaille {
     font-size: 250%;
     font-weight: bolder;
+}
+
+#ordinateur {
+    position: absolute;
+    left: 33%;
+    top: 100px;
+}
+
+.recherche {
+    margin: 3% 34.5% 0;
+    height: 300px;
+    text-align: center;
+    border: 5px solid #1D5C63;
+    border-radius: 15px;
+}
+
+.pad_rec {
+    padding-top: 1.5em;
+}
+
+.pad_rec_2 {
+    padding-top: 0.5em;
+}
+
+.recherche input {
+    padding: 0.5em;
+    border-radius: 5px;
+}
+
+.recherche h1 {
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    color: #417D7A;
+}
+
+button {
+    margin-top: 1em;
+    text-transform: uppercase;
+    font-weight: bold;
+    font-size: 1em;
+    color: #417D7A;
+    padding: 2%;
+}
+
+
+
+.resultat_salaire h1 {
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    color: #417D7A;
+    text-align: center;
+}
+
+.salaire_div h2 {
+    text-transform: uppercase;
+    color: #1D5C63;
+}
+
+.salaire_div a {
+    border: 1px solid black;
+    text-decoration: none;
+    color: #f8f3ec;
+    padding: 0.3em;
+    border-radius: 15px;
+    background: #417D7A;
+    margin-left: 5%;
+    /* text-transform: uppercase; */
+}
+
+#job_img {
+    width: 15%;
+    position: absolute;
+    top: 200px;
+    left: 75%;
+}
+
+.phrases {
+    margin: 2% 15%;
+    border-radius: 15px;
+    background-color: #f8f3ec;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+}
+
+.phrases p {
+    color: #417D7A;
+    font-size: 1.5em;
+    padding: 0.5em;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+}
+
+#phrases_h1 {
+    text-align: center;
+    font-family: fantasy;
+    color: #417D7A;
+}
+
+.displayFlex {
+    display: flex;
+}
+
+.ligne {
+    width: 33%;
+    margin: 2% 1%;
+    height: 5px;
+    background-color: black;
 }

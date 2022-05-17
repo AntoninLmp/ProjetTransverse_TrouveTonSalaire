@@ -13,3 +13,64 @@ body {
     border: 1px solid #e6e1da;
     border-radius: 15px;
 }
+
+.arbre_filiere {
+    text-align: center;
+}
+
+.arbre_filiere div {
+    display: flex;
+    justify-content: space-around;
+    /* margin-bottom : 1.5em; */
+}
+
+.arbre_filiere button {
+    width: 10em;
+    padding: 0.5em;
+    border-radius: 10px;
+    color: #417D7A;
+    font-weight: bold;
+    background-color: white;
+}
+
+/* .hr_t1 {
+    width: 37%;
+    height: 3px;
+    background-color: black;
+}
+
+.hr_t2 {
+    height: 15px;
+    width: 3px;
+    background-color: black;
+    display: flex;
+    /* position: relative; */
+/* margin: 0;
+} */
+
+.ligne {
+    border: 3px solid black;
+    border-bottom: 0;
+    height: 40px;
+}
+
+.l1 {
+    margin: 0 25%;
+}
+
+.l2 {
+    padding: 0 5%;
+}
+
+.l_2 {
+    display: flex;
+}
+
+
+.sep {
+    width: 20%;
+}
+
+#sup {
+    justify-content: space-evenly;
+}
