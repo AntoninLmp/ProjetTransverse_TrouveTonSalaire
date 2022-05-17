@@ -18,9 +18,11 @@
         <p>Ensemble, participons à la détaboutisation des salaires !</p>
     </div>
     <div class="container_1_2">
-        <a href="" id="but_quest">
-            Je me lance
-        </a>
+        {% if user.is_authenticated %}
+        <a href="{% url 'salaire'%}" id="but_quest"> Je me lance </a>
+        {% else %}
+        <a href="{% url 'signup'%}" id="but_quest"> Je me lance </a>
+        {% endif %}
     </div>
 </div>
 
@@ -35,6 +37,12 @@
             une <span>détaboutisation</span> des salaires mais également de l'argent en générale.
         </p>
     </div>
+</div>
+
+<div class=" container_home container_5">
+    <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Minus officia dolorem obcaecati dicta sequi iusto,
+        veniam animi distinctio cumque illo maiores voluptatem consectetur cum laudantium praesentium. Aliquid
+        asperiores aperiam possimus?</p>
 </div>
 
 <div class="container_home container_3">
