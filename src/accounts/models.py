@@ -7,4 +7,5 @@ class utilisateur(AbstractUser):
     poste = models.CharField(max_length=300)
     diplome = models.CharField(max_length=300)
     departement = models.CharField(max_length=300)
+    entreprise = models.CharField(max_length=300)
     pass

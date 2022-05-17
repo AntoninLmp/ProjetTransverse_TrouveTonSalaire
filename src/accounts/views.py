@@ -1,3 +1,4 @@
+import email
 from django.shortcuts import redirect, render
 from django.contrib.auth import get_user_model, login, logout, authenticate
 
@@ -9,11 +10,18 @@ def signup(request):
     if request.method == "POST":
         username = request.POST.get("username")
         password = request.POST.get("password")
+        poste = request.POST.get("poste")
         salaire = request.POST.get("salaire")
-        user = User.objects.create_user(username=username,password=password)
+        diplome = request.POST.get("diplome")
+        departement = request.POST.get("region")
+        entreprise = request.POST.get("entreprise")
+        mail = request.POST.get("mail")
+        user = User.objects.create_user(username=username,password=password,salaire=salaire,
+                                        poste=poste,diplome=diplome,departement=departement,entreprise=entreprise,email=mail)
         login(request,user)
         return redirect('index')
     return render(request, "accounts/signup.html")
+
 
 def login_user(request):
     if request.method == "POST":
