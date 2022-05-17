@@ -34,7 +34,6 @@
             <a href="{{ p.get_absolute_url }}">Plus de détails</a>
             <p>{{ forloop.counter }}</p>
         </div>
-        
         {% endif %} {% endfor %}
     </div>
     <div class="salaire_list" id="div2">
@@ -45,8 +44,100 @@
             <a href="{{ p.get_absolute_url }}">Plus de détails</a>
             <p>{{ forloop.counter }}</p>
         </div>
-        
         {% endif %} {% endfor %}
+    </div>
+    <div class="salaire_list" id="div3">
+        {% for p in postes %} {% if forloop.counter > 20 and forloop.counter < 31 %} 
+        <div class="salaire_div">
+            <h2> {{p.libelle}}</h2>
+            <p>{{p.salaire}}</p>
+            <a href="{{ p.get_absolute_url }}">Plus de détails</a>
+            <p>{{ forloop.counter }}</p>
+        </div>
+        {% endif %} {% endfor %}
+    </div>
+    <div class="salaire_list" id="div4">
+        {% for p in postes %} {% if forloop.counter > 30 and forloop.counter < 41 %} 
+        <div class="salaire_div">
+            <h2> {{p.libelle}}</h2>
+            <p>{{p.salaire}}</p>
+            <a href="{{ p.get_absolute_url }}">Plus de détails</a>
+            <p>{{ forloop.counter }}</p>
+        </div>
+        {% endif %} {% endfor %}
+    </div>
+    <div class="salaire_list" id="div5">
+        {% for p in postes %} {% if forloop.counter > 40 and forloop.counter < 51 %} 
+        <div class="salaire_div">
+            <h2> {{p.libelle}}</h2>
+            <p>{{p.salaire}}</p>
+            <a href="{{ p.get_absolute_url }}">Plus de détails</a>
+            <p>{{ forloop.counter }}</p>
+        </div>
+        {% endif %} {% endfor %}
+    </div>
+    <div class="salaire_list" id="div6">
+        {% for p in postes %} {% if forloop.counter > 50 and forloop.counter < 61 %} 
+        <div class="salaire_div">
+            <h2> {{p.libelle}}</h2>
+            <p>{{p.salaire}}</p>
+            <a href="{{ p.get_absolute_url }}">Plus de détails</a>
+            <p>{{ forloop.counter }}</p>
+        </div>
+        {% endif %} {% endfor %}
+    </div>
+    <div class="salaire_list" id="div7">
+        {% for p in postes %} {% if forloop.counter > 60 and forloop.counter < 71 %} 
+        <div class="salaire_div">
+            <h2> {{p.libelle}}</h2>
+            <p>{{p.salaire}}</p>
+            <a href="{{ p.get_absolute_url }}">Plus de détails</a>
+            <p>{{ forloop.counter }}</p>
+        </div>
+        {% endif %} {% endfor %}
+    </div>
+    <div class="salaire_list" id="div8">
+        {% for p in postes %} {% if forloop.counter > 70 and forloop.counter < 81 %} 
+        <div class="salaire_div">
+            <h2> {{p.libelle}}</h2>
+            <p>{{p.salaire}}</p>
+            <a href="{{ p.get_absolute_url }}">Plus de détails</a>
+            <p>{{ forloop.counter }}</p>
+        </div>
+        {% endif %} {% endfor %}
+    </div>
+    <div class="salaire_list" id="div9">
+        {% for p in postes %} {% if forloop.counter > 80 and forloop.counter < 91 %} 
+        <div class="salaire_div">
+            <h2> {{p.libelle}}</h2>
+            <p>{{p.salaire}}</p>
+            <a href="{{ p.get_absolute_url }}">Plus de détails</a>
+            <p>{{ forloop.counter }}</p>
+        </div>
+        {% endif %} {% endfor %}
+    </div>
+    <div class="salaire_list" id="div10">
+        {% for p in postes %} {% if forloop.counter < 90 %} 
+        <div class="salaire_div">
+            <h2> {{p.libelle}}</h2>
+            <p>{{p.salaire}}</p>
+            <a href="{{ p.get_absolute_url }}">Plus de détails</a>
+            <p>{{ forloop.counter }}</p>
+        </div>
+        {% endif %} {% endfor %}
+    </div>
+    <button id="buttonPre"> Page precedente</button>
+    <div>
+        <p id="page1">1</p>
+        <p id="page2">2</p>
+        <p id="page3">3</p>
+        <p id="page4">4</p>
+        <p id="page5">5</p>
+        <p id="page6">6</p>
+        <p id="page7">7</p>
+        <p id="page8">8</p>
+        <p id="page9">9</p>
+        <p id="page10">10</p>
     </div>
     <button id="buttonSuiv"> Page suivante</button>
 </article>

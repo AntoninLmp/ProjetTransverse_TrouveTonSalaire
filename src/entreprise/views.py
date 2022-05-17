@@ -11,7 +11,8 @@ def salaire(request):
         postes = Profile.objects.filter(libelle__icontains=jobTitle)
     else:
         postes = None
-    return render(request, "salaire.html", context={"postes" : postes})
+    nbr = len(postes)
+    return render(request, "salaire.html", context={"postes" : postes,"nbr":nbr})
 
 
 def profile_trouve(request, slug):
