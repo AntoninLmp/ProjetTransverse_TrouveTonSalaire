@@ -7,6 +7,7 @@ main {
 .salaire_list {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
+    margin: 0 3%;
 }
 
 .salaire_div {
@@ -86,7 +87,8 @@ button {
     padding: 0.3em;
     border-radius: 15px;
     background: #417D7A;
-    margin-left: 5%;
+    margin: 0 40%;
+    padding: 0.5em;
     /* text-transform: uppercase; */
 }
 

@@ -25,7 +25,6 @@
 </article>
 <img src="{% static 'images/plantes.png' %}" alt="job" id="job_img">
 <article class="resultat_salaire">
-    <h1>Proposition de salaire</h1>
     <div class="salaire_list">
         {% for p in postes %}
         <div class="salaire_div">
@@ -33,7 +32,6 @@
             <p>{{p.salaire}}</p>
             <a href="{{ p.get_absolute_url }}">Plus de détails</a>
         </div>
-
         {% endfor %}
     </div>
 </article>

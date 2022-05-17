@@ -6,12 +6,16 @@ h1 {
 h2 {
     color: #4b9b97;
     text-decoration: underline;
+    font-size: 1.8em;
     margin-left: 5%;
+    text-align: center;
 }
 
 p {
     text-align: justify;
-    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 1.2em;
+    line-height: 30px;
 }
 
 .container_b {
