@@ -64,48 +64,48 @@ b1.style.color = 'red';
 togg1.addEventListener("click", () => {
     if (getComputedStyle(d1).display != "none" && d2.firstChild.nextSibling != null) {
         d1.style.display = "none";
-        d2.style.display = "grid";
+        d2.style.display = "flex";
         decolorer()
         b2.style.color = 'red';
     } else if (getComputedStyle(d2).display != "none" && d3.firstChild.nextSibling != null) {
         d2.style.display = "none";
-        d3.style.display = "grid";
+        d3.style.display = "flex";
         decolorer()
         b3.style.color = 'red';
     } else if (getComputedStyle(d3).display != "none" && d4.firstChild.nextSibling != null) {
         d3.style.display = "none";
-        d4.style.display = "grid";
+        d4.style.display = "flex";
         decolorer()
         b4.style.color = 'red';
 
     } else if (getComputedStyle(d4).display != "none" && d5.firstChild.nextSibling != null) {
         d4.style.display = "none";
-        d5.style.display = "grid";
+        d5.style.display = "flex";
         decolorer()
         b5.style.color = 'red';
     } else if (getComputedStyle(d5).display != "none" && d6.firstChild.nextSibling != null) {
         d5.style.display = "none";
-        d6.style.display = "grid";
+        d6.style.display = "flex";
         decolorer()
         b6.style.color = 'red';
     } else if (getComputedStyle(d6).display != "none" && d7.firstChild.nextSibling != null) {
         d6.style.display = "none";
-        d7.style.display = "grid";
+        d7.style.display = "flex";
         decolorer()
         b7.style.color = 'red';
     } else if (getComputedStyle(d7).display != "none" && d8.firstChild.nextSibling != null) {
         d7.style.display = "none";
-        d8.style.display = "grid";
+        d8.style.display = "flex";
         decolorer()
         b8.style.color = 'red';
     } else if (getComputedStyle(d8).display != "none" && d9.firstChild.nextSibling != null) {
         d8.style.display = "none";
-        d9.style.display = "grid";
+        d9.style.display = "flex";
         decolorer()
         b9.style.color = 'red';
     } else if (getComputedStyle(d9).display != "none" && d10.firstChild.nextSibling != null) {
         d9.style.display = "none";
-        d10.style.display = "grid";
+        d10.style.display = "flex";
         decolorer()
         b10.style.color = 'red';
     }
@@ -113,47 +113,47 @@ togg1.addEventListener("click", () => {
 
 togg2.addEventListener("click", () => {
     if (getComputedStyle(d2).display != "none") {
-        d1.style.display = "grid";
+        d1.style.display = "flex";
         d2.style.display = "none";
         decolorer()
         b1.style.color = 'red';
     } else if (getComputedStyle(d3).display != "none") {
-        d2.style.display = "grid";
+        d2.style.display = "flex";
         d3.style.display = "none";
         decolorer()
         b2.style.color = 'red';
     } else if (getComputedStyle(d4).display != "none") {
-        d3.style.display = "grid";
+        d3.style.display = "flex";
         d4.style.display = "none";
         decolorer()
         b3.style.color = 'red';
     } else if (getComputedStyle(d5).display != "none") {
-        d4.style.display = "grid";
+        d4.style.display = "flex";
         d5.style.display = "none";
         decolorer()
         b4.style.color = 'red';
     } else if (getComputedStyle(d6).display != "none") {
-        d5.style.display = "grid";
+        d5.style.display = "flex";
         d6.style.display = "none";
         decolorer()
         b5.style.color = 'red';
     } else if (getComputedStyle(d7).display != "none") {
-        d6.style.display = "grid";
+        d6.style.display = "flex";
         d7.style.display = "none";
         decolorer()
         b6.style.color = 'red';
     } else if (getComputedStyle(d8).display != "none") {
-        d7.style.display = "grid";
+        d7.style.display = "flex";
         d8.style.display = "none";
         decolorer()
         b7.style.color = 'red';
     } else if (getComputedStyle(d9).display != "none") {
-        d8.style.display = "grid";
+        d8.style.display = "flex";
         d9.style.display = "none";
         decolorer()
         b8.style.color = 'red';
     } else if (getComputedStyle(d10).display != "none") {
-        d9.style.display = "grid";
+        d9.style.display = "flex";
         d10.style.display = "none";
         decolorer()
         b9.style.color = 'red';
@@ -162,61 +162,61 @@ togg2.addEventListener("click", () => {
 
 b1.addEventListener("click", () => {
     cacher()
-    d1.style.display = "grid";
+    d1.style.display = "flex";
     decolorer()
     b1.style.color = 'red';
 })
 b2.addEventListener("click", () => {
     cacher()
-    d2.style.display = "grid";
+    d2.style.display = "flex";
     decolorer()
     b2.style.color = 'red';
 })
 b3.addEventListener("click", () => {
     cacher()
-    d3.style.display = "grid";
+    d3.style.display = "flex";
     decolorer()
     b3.style.color = 'red';
 })
 b4.addEventListener("click", () => {
     cacher()
-    d4.style.display = "grid";
+    d4.style.display = "flex";
     decolorer()
     b4.style.color = 'red';
 })
 b5.addEventListener("click", () => {
     cacher()
-    d5.style.display = "grid";
+    d5.style.display = "flex";
     decolorer()
     b5.style.color = 'red';
 })
 b6.addEventListener("click", () => {
     cacher()
-    d6.style.display = "grid";
+    d6.style.display = "flex";
     decolorer()
     b6.style.color = 'red';
 })
 b7.addEventListener("click", () => {
     cacher()
-    d7.style.display = "grid";
+    d7.style.display = "flex";
     decolorer()
     b7.style.color = 'red';
 })
 b8.addEventListener("click", () => {
     cacher()
-    d8.style.display = "grid";
+    d8.style.display = "flex";
     decolorer()
     b8.style.color = 'red';
 })
 b9.addEventListener("click", () => {
     cacher()
-    d9.style.display = "grid";
+    d9.style.display = "flex";
     decolorer()
     b9.style.color = 'red';
 })
 b10.addEventListener("click", () => {
     cacher()
-    d10.style.display = "grid";
+    d10.style.display = "flex";
     decolorer()
     b10.style.color = 'red';
 })

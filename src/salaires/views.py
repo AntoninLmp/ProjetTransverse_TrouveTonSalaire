@@ -9,7 +9,8 @@ from salaires.models import Entreprise
 
 def accueil_entreprise(request):
     entreprises = Entreprise.objects.all()
-    return render(request, "salaires/accueil_entreprise.html", context={"entreprises" : entreprises})
+    num = len(entreprises)
+    return render(request, "salaires/accueil_entreprise.html", context={"entreprises" : entreprises,"nbr":num})
 
 def entreprise_trouvee(request, slug):
     entreprise = get_object_or_404(Entreprise,slug=slug)

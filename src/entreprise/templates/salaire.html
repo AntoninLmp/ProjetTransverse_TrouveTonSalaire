@@ -20,14 +20,14 @@
             <label for="villeJob"></label>
             <input id="villeJob" type="text" name="villeJob" placeholder="Ville">
         </div>
-        <button type="submit">Rechercher</button>
+        <button type="submit" id="buttonRechercher">Rechercher</button>
     </form>
 </article>
 <img src="{% static 'images/plantes.png' %}" alt="job" id="job_img">
 <article class="resultat_salaire">
     <h1>Proposition de salaire</h1>
     <div class="salaire_list" id="div1">
-        {% for p in postes %} {% if forloop.counter < 11 %} 
+        {% for p in postes %} {% if forloop.counter < 11 %}
         <div class="salaire_div">
             <h2> {{p.libelle}}</h2>
             <p>{{p.salaire}}</p>
@@ -117,7 +117,7 @@
         {% endif %} {% endfor %}
     </div>
     <div class="salaire_list" id="div10">
-        {% for p in postes %} {% if forloop.counter < 90 %} 
+        {% for p in postes %} {% if forloop.counter > 90 %} 
         <div class="salaire_div">
             <h2> {{p.libelle}}</h2>
             <p>{{p.salaire}}</p>
@@ -126,20 +126,22 @@
         </div>
         {% endif %} {% endfor %}
     </div>
-    <button id="buttonPre"> Page precedente</button>
-    <div>
-        <p id="page1">1</p>
-        <p id="page2">2</p>
-        <p id="page3">3</p>
-        <p id="page4">4</p>
-        <p id="page5">5</p>
-        <p id="page6">6</p>
-        <p id="page7">7</p>
-        <p id="page8">8</p>
-        <p id="page9">9</p>
-        <p id="page10">10</p>
+    {% if nbr != 0 %}
+    <div style="display:flex; justify-content: center">
+        <button id="buttonPre"> Page precedente</button>
+        <button id="page1">1</button>
+        <button id="page2">2</button>
+        <button id="page3">3</button>
+        <button id="page4">4</button>
+        <button id="page5">5</button>
+        <button id="page6">6</button>
+        <button id="page7">7</button>
+        <button id="page8">8</button>
+        <button id="page9">9</button>
+        <button id="page10">10</button>
+        <button id="buttonSuiv"> Page suivante</button>
     </div>
-    <button id="buttonSuiv"> Page suivante</button>
+    {% endif %}
 </article>
 <h1 id="phrases_h1">Les questions qu'on se pose tous...</h1>
 <article class="phrases">
