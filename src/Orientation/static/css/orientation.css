@@ -88,6 +88,9 @@
     height: 150px;
     background: rgb(35, 166, 129);
     background: linear-gradient(90deg, rgba(35, 166, 129, 1) 22%, rgba(21, 142, 106, 0.5382528011204482) 60%);
+    text-transform: uppercase;
+    font-family: 'Times New Roman', Times, serif;
+    color: white;
 }
 
 .cadre_ h1 {
