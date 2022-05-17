@@ -120,6 +120,11 @@ button {
     width: 175px;
 }
 
+#inscrip {
+    color: #477976;
+    text-decoration: none;
+}
+
 @media screen and (max-width: 1046px) {
     .img_co_ls {
         position: relative;
