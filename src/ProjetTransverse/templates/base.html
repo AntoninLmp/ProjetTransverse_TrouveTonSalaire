@@ -23,6 +23,7 @@
                 <img src="{% static 'images/logo_website.png' %}" alt="Logo" id="img_logo">
             </a>
             <ul class="nav_list">
+                {% if user.is_authenticated %}
                 <li>
                     <a href="{% url 'salaire' %}" class="navbar_header">Métier</a>
                 </li>
@@ -33,12 +34,25 @@
                     <a href="{% url 'orientation' %}" class="navbar_header">Orientation</a>
                 </li>
                 <li>
-                    {% if user.is_authenticated %}
-                    <a href="{% url 'compte' %}">{{user.username}}</a>{% else %}
-
-                    <a href="{% url 'login' %}">Connexion</a>
-                    <a href="{% url 'signup' %}">S'inscrire</a> {% endif %}
+                    <a href="{% url 'compte' %}">{{user.username}}</a>
                 </li>
+                {% else %}
+                <li>
+                    <a href="{% url 'login' %}" class="navbar_header">Métier</a>
+                </li>
+                <li>
+                    <a href="{% url 'login' %}" class="navbar_header">Entreprise</a>
+                </li>
+                <li>
+                    <a href="{% url 'login' %}" class="navbar_header">Orientation</a>
+                </li>
+                <li>
+                    <a href="{% url 'login' %}">Connexion</a>
+                </li>
+                <li>
+                    <a href="{% url 'signup' %}">S'inscrire</a>
+                </li>
+                {% endif %}
             </ul>
         </nav>
     </header>
@@ -59,13 +73,9 @@
         </ul>
         <div class="footer_container">
             <p>© 2022, create by Antonin Lampin, Houda Zamani et Simon Martinenq</p>
-            <img src="https://webstockreview.net/images/instagram-clipart-black-and-white-15.png" alt="Instagram Logo"
-                class="footerImg">
-            <img src="https://www.shareicon.net/data/2016/07/14/607478_facebook_4096x4096.png" alt="Facebook logo"
-                class="footerImg">
-            <a href="https://www.linkedin.com/company/projet-transverse"><img
-                    src="https://sguru.org/wp-content/uploads/2018/02/linkedin-png-linkedin-icon-1600.png"
-                    alt="Linkedin Logo" class="footerImg"></a>
+            <img src="https://webstockreview.net/images/instagram-clipart-black-and-white-15.png" alt="Instagram Logo" class="footerImg">
+            <img src="https://www.shareicon.net/data/2016/07/14/607478_facebook_4096x4096.png" alt="Facebook logo" class="footerImg">
+            <a href="https://www.linkedin.com/company/projet-transverse"><img src="https://sguru.org/wp-content/uploads/2018/02/linkedin-png-linkedin-icon-1600.png" alt="Linkedin Logo" class="footerImg"></a>
         </div>
     </footer>
 </body>
