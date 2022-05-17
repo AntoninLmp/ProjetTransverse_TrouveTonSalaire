@@ -8,10 +8,7 @@
 
 <!-- MAIN -->
 {% block content2 %}
-<article>
-    <div>
-        <img src="{% static 'images/desk_img.png' %}" alt="Images_ordinateur" id="img_co">
-    </div>
+<article class="displayFlex justify_e" id="info_perso">
     <div class="moduleCo2">
         <h1>Mes informations personnel</h1>
         <p>Nom d'utilisateur : {{user.username}}</p>
@@ -21,7 +18,10 @@
         <p>Salaire : {{user.salaire}}</p>
         <p>Diplôme : {{user.diplome}}</p>
         <p>Departement : {{user.departement}}</p>
-        <a href="{% url 'logout' %}">Deconnexion</a>
+        <a href="{% url 'logout' %}" id="deco">Deconnexion</a>
+    </div>
+    <div>
+        <img src="{% static 'images/Connexion_Img.png' %}" alt="Images_ordinateur" id="img_co">
     </div>
 </article>
 
