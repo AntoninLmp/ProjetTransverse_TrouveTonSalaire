@@ -23,7 +23,7 @@
         <button type="submit">Rechercher</button>
     </form>
 </article>
-<img src="{% static 'images/job_2.png' %}" alt="job" id="job_img">
+<img src="{% static 'images/plantes.png' %}" alt="job" id="job_img">
 <article class="resultat_salaire">
     <h1>Proposition de salaire</h1>
     <div class="salaire_list">
@@ -31,7 +31,7 @@
         <div class="salaire_div">
             <h2> {{p.libelle}}</h2>
             <p>{{p.salaire}}</p>
-            <a href="{{ p.get_absolute_url }}"> Voir l'Entreprise</a>
+            <a href="{{ p.get_absolute_url }}">Plus de détails</a>
         </div>
 
         {% endfor %}
