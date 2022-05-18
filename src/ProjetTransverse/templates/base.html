@@ -25,26 +25,26 @@
             <ul class="nav_list">
                 {% if user.is_authenticated %}
                 <li>
-                    <a href="{% url 'salaire' %}" class="navbar_header">Métier</a>
+                    <a href="{% url 'salaire' %}" class="navbar_header">orientation</a>
                 </li>
                 <li>
                     <a href="{% url 'accueil_entreprise' %}" class="navbar_header">Entreprise</a>
                 </li>
                 <li>
-                    <a href="{% url 'orientation' %}" class="navbar_header">Orientation</a>
+                    <a href="{% url 'orientation' %}" class="navbar_header">Postes</a>
                 </li>
                 <li>
                     <a href="{% url 'compte' %}">{{user.username}}</a>
                 </li>
                 {% else %}
                 <li>
-                    <a href="{% url 'login' %}" class="navbar_header">Métier</a>
+                    <a href="{% url 'login' %}" class="navbar_header">orientation</a>
                 </li>
                 <li>
                     <a href="{% url 'login' %}" class="navbar_header">Entreprise</a>
                 </li>
                 <li>
-                    <a href="{% url 'login' %}" class="navbar_header">Orientation</a>
+                    <a href="{% url 'login' %}" class="navbar_header">Postes</a>
                 </li>
                 <li>
                     <a href="{% url 'login' %}">Connexion</a>
@@ -60,16 +60,28 @@
         {% block content2 %} {% endblock %}
     </main>
     <footer class="displayFlex">
-        <ul class="displayFlex">
-            <li>
-                <a href="#" class="footer-link">Accueil</a>
-            </li>
-            <li>
-                <a href="#" class="footer-link">A propos</a>
-            </li>
-            <li>
-                <a href="#" class="footer-link">Salaire</a>
-            </li>
+        <ul class="nav_list" style="padding:1em">
+            {% if user.is_authenticated %}
+                <li>
+                    <a href="{% url 'salaire' %}" class="navbar_header">orientation</a>
+                </li>
+                <li>
+                    <a href="{% url 'accueil_entreprise' %}" class="navbar_header">Entreprise</a>
+                </li>
+                <li>
+                    <a href="{% url 'orientation' %}" class="navbar_header">Postes</a>
+                </li>
+                {% else %}
+                <li>
+                    <a href="{% url 'login' %}" class="navbar_header">orientation</a>
+                </li>
+                <li>
+                    <a href="{% url 'login' %}" class="navbar_header">Entreprise</a>
+                </li>
+                <li>
+                    <a href="{% url 'login' %}" class="navbar_header">Postes</a>
+                </li>
+                {% endif %}
         </ul>
         <div class="footer_container">
             <p>© 2022, create by Antonin Lampin, Houda Zamani et Simon Martinenq</p>
