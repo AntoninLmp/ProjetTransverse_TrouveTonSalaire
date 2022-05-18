@@ -9,9 +9,11 @@ def salaire(request):
         jobTitle = request.POST.get("jobTitle")
         dep = request.POST.get("villeJob") 
         postes = Profile.objects.filter(libelle__icontains=jobTitle)
+        nbr = len(postes)
     else:
         postes = None
-    return render(request, "salaire.html", context={"postes" : postes})
+        nbr = 0
+    return render(request, "salaire.html", context={"postes" : postes,"nbr":nbr})
 
 
 def profile_trouve(request, slug):

@@ -1,17 +1,12 @@
-{% extends 'base.html' %}
-{% load static %}
-
-{% block content1 %}
+{% extends 'base.html' %} {% load static %} {% block content1 %}
 <link rel="stylesheet" href="{% static 'css/styleEntreprise.css' %}">
 <title>Entreprise</title>
-{% endblock %}
-
-
-{% block content2 %}
+{% endblock %} {% block content2 %}
 <article id="liste_ent">
-    <h1> Entreprises</h1>
-    <div class="container_tt_entreprise">
-        {% for ent in entreprises %}
+
+    <h1> Entreprise</h1>
+    <div class="container_tt_entreprise" id="div1">
+        {% for ent in entreprises %}{% if forloop.counter < 11 %}
         <div class="container_1_entreprise">
             <h2> {{ent.nom}}</h2>
             <p>{{ent.description}}</p>
@@ -20,7 +15,142 @@
                 <a href="{{ ent.get_absolute_url }}"> Voir l'Entreprise</a>
             </p>
         </div>
+        {% endif %}
         {% endfor %}
     </div>
+    <div class="container_tt_entreprise" id="div2">
+        {% for ent in entreprises %}{% if forloop.counter > 10 and forloop.counter < 21 %} 
+        <div class="container_1_entreprise">
+            <h2> {{ent.nom}}</h2>
+            <p>{{ent.description}}</p>
+            <img src="{{ent.logo}}" alt="{{ent.nom}}">
+            <p>
+                <a href="{{ ent.get_absolute_url }}"> Voir l'Entreprise</a>
+            </p>
+        </div>
+        {% endif %}
+        {% endfor %}
+    </div>
+    <div class="container_tt_entreprise" id="div3">
+        {% for ent in entreprises %}{% if forloop.counter > 20 and forloop.counter < 31 %} 
+        <div class="container_1_entreprise">
+            <h2> {{ent.nom}}</h2>
+            <p>{{ent.description}}</p>
+            <img src="{{ent.logo}}" alt="{{ent.nom}}">
+            <p>
+                <a href="{{ ent.get_absolute_url }}"> Voir l'Entreprise</a>
+            </p>
+        </div>
+        {% endif %}
+        {% endfor %}
+    </div>
+    <div class="container_tt_entreprise" id="div4">
+        {% for ent in entreprises %}{% if forloop.counter > 30 and forloop.counter < 41 %} 
+        <div class="container_1_entreprise">
+            <h2> {{ent.nom}}</h2>
+            <p>{{ent.description}}</p>
+            <img src="{{ent.logo}}" alt="{{ent.nom}}">
+            <p>
+                <a href="{{ ent.get_absolute_url }}"> Voir l'Entreprise</a>
+            </p>
+        </div>
+        {% endif %}
+        {% endfor %}
+    </div>
+    <div class="container_tt_entreprise" id="div5">
+        {% for ent in entreprises %}{% if forloop.counter > 40 and forloop.counter < 51 %} 
+        <div class="container_1_entreprise">
+            <h2> {{ent.nom}}</h2>
+            <p>{{ent.description}}</p>
+            <img src="{{ent.logo}}" alt="{{ent.nom}}">
+            <p>
+                <a href="{{ ent.get_absolute_url }}"> Voir l'Entreprise</a>
+            </p>
+        </div>
+        {% endif %}
+        {% endfor %}
+    </div>
+    <div class="container_tt_entreprise" id="div6">
+        {% for ent in entreprises %}{% if forloop.counter > 50 and forloop.counter < 61 %} 
+        <div class="container_1_entreprise">
+            <h2> {{ent.nom}}</h2>
+            <p>{{ent.description}}</p>
+            <img src="{{ent.logo}}" alt="{{ent.nom}}">
+            <p>
+                <a href="{{ ent.get_absolute_url }}"> Voir l'Entreprise</a>
+            </p>
+        </div>
+        {% endif %}
+        {% endfor %}
+    </div>
+    <div class="container_tt_entreprise" id="div7">
+        {% for ent in entreprises %}{% if forloop.counter > 60 and forloop.counter < 71 %} 
+        <div class="container_1_entreprise">
+            <h2> {{ent.nom}}</h2>
+            <p>{{ent.description}}</p>
+            <img src="{{ent.logo}}" alt="{{ent.nom}}">
+            <p>
+                <a href="{{ ent.get_absolute_url }}"> Voir l'Entreprise</a>
+            </p>
+        </div>
+        {% endif %}
+        {% endfor %}
+    </div>
+    <div class="container_tt_entreprise" id="div8">
+        {% for ent in entreprises %}{% if forloop.counter > 60 and forloop.counter < 71 %} 
+        <div class="container_1_entreprise">
+            <h2> {{ent.nom}}</h2>
+            <p>{{ent.description}}</p>
+            <img src="{{ent.logo}}" alt="{{ent.nom}}">
+            <p>
+                <a href="{{ ent.get_absolute_url }}"> Voir l'Entreprise</a>
+            </p>
+        </div>
+        {% endif %}
+        {% endfor %}
+    </div>
+    <div class="container_tt_entreprise" id="div9">
+        {% for ent in entreprises %}{% if forloop.counter > 80 and forloop.counter < 91 %} 
+        <div class="container_1_entreprise">
+            <h2> {{ent.nom}}</h2>
+            <p>{{ent.description}}</p>
+            <img src="{{ent.logo}}" alt="{{ent.nom}}">
+            <p>
+                <a href="{{ ent.get_absolute_url }}"> Voir l'Entreprise</a>
+            </p>
+        </div>
+        {% endif %}
+        {% endfor %}
+    </div>
+    <div class="container_tt_entreprise" id="div10">
+        {% for ent in entreprises %}{% if forloop.counter > 90 %} 
+        <div class="container_1_entreprise">
+            <h2> {{ent.nom}}</h2>
+            <p>{{ent.description}}</p>
+            <img src="{{ent.logo}}" alt="{{ent.nom}}">
+            <p>
+                <a href="{{ ent.get_absolute_url }}"> Voir l'Entreprise</a>
+            </p>
+        </div>
+        {% endif %}
+        {% endfor %}
+    </div>
+    {% if nbr != 0 %}
+    <div style="display:flex; justify-content: center">
+        <button id="buttonPre"> Page precedente</button>
+        <button id="page1">1</button>
+        <button id="page2">2</button>
+        <button id="page3">3</button>
+        <button id="page4">4</button>
+        <button id="page5">5</button>
+        <button id="page6">6</button>
+        <button id="page7">7</button>
+        <button id="page8">8</button>
+        <button id="page9">9</button>
+        <button id="page10">10</button>
+        <button id="buttonSuiv"> Page suivante</button>
+    </div>
+    {% endif %}
 </article>
+<script src="{% static 'js/pagination.js'  %}"></script>
 {% endblock %}
