@@ -25,9 +25,8 @@
 </article>
 <img src="{% static 'images/plantes.png' %}" alt="job" id="job_img">
 <article class="resultat_salaire">
-    <h1>Proposition de salaire</h1>
     <div class="salaire_list" id="div1">
-        {% for p in postes %} {% if forloop.counter < 11 %}
+      {% for p in postes %} {% if forloop.counter < 11 %}
         <div class="salaire_div">
             <h2> {{p.libelle}}</h2>
             <p>{{p.salaire}}</p>
@@ -140,6 +139,7 @@
         <button id="page9">9</button>
         <button id="page10">10</button>
         <button id="buttonSuiv"> Page suivante</button>
+
     </div>
     {% endif %}
 </article>
