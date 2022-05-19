@@ -141,8 +141,6 @@ container_5 h1 {
 
 .red_1 {
     background-color: #417D7A;
-    position: relative;
-    top: 3em;
 }
 
 .red_2 {
@@ -160,4 +158,22 @@ container_5 h1 {
 
 #img_logo_ent {
     width: 75%;
+}
+
+.margin5 {
+    margin: 0 5%;
+}
+
+@media (max-width:850px) {
+    .img_ct4 {
+        display: none;
+    }
+
+    #imgHP1 {
+        display: none;
+    }
+
+    .red_2 {
+        margin-left: 0;
+    }
 }
