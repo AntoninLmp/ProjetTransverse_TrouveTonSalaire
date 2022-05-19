@@ -8,8 +8,22 @@ from entreprise.models import Profile
 def salaire(request):
     if request.method == "POST":
         jobTitle = request.POST.get("jobTitle")
-        dep = request.POST.get("villeJob") 
-        postes = Profile.objects.filter(libelle__icontains=jobTitle)
+        dep = request.POST.get("villeJob")
+        cate = request.POST.get("categorie")
+        recrute = request.POST.get("recrute")
+            
+        if cate != "" and recrute != None and jobTitle != "" : 
+            postes = Profile.objects.filter(libelle__icontains=jobTitle,secteur=cate, recrute=True)
+        elif cate != "" and recrute != None : 
+            postes = Profile.objects.filter(libelle__icontains=jobTitle,secteur=cate, recrute=True)
+        elif jobTitle != "" and recrute != None : 
+            postes = Profile.objects.filter(libelle__icontains=jobTitle, recrute=True)
+        elif cate != "":
+            postes = Profile.objects.filter(libelle__icontains=jobTitle,secteur=cate)
+        elif recrute != None :
+            postes = Profile.objects.filter(libelle__icontains=jobTitle,recrute=True)
+        else:
+            postes = Profile.objects.filter(libelle__icontains=jobTitle)
         nbr = len(postes)
     else:
         postes = None

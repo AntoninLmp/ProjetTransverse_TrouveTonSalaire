@@ -66,8 +66,6 @@ button {
     padding: 2%;
 }
 
-
-
 .resultat_salaire h1 {
     text-transform: uppercase;
     letter-spacing: 2px;
@@ -130,4 +128,22 @@ button {
     margin: 2% 1%;
     height: 5px;
     background-color: black;
+}
+
+form.form_recherche {
+    display: table;
+}
+
+div.form_recherche {
+    display: table-row;
+}
+
+label,
+input {
+    display: table-cell;
+    margin-bottom: 10px;
+}
+
+label {
+    padding-right: 10px;
 }
