@@ -1,6 +1,7 @@
-import email
 from django.shortcuts import redirect, render
 from django.contrib.auth import get_user_model, login, logout, authenticate
+
+from entreprise.models import Profile
 
 # Create your views here.
 
@@ -20,7 +21,8 @@ def signup(request):
                                         poste=poste,diplome=diplome,departement=departement,entreprise=entreprise,email=mail)
         login(request,user)
         return redirect('index')
-    return render(request, "accounts/signup.html")
+    postes = Profile.objects.all()
+    return render(request, "accounts/signup.html",context={"postes": postes})
 
 
 def login_user(request):

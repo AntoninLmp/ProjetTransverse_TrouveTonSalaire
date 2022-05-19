@@ -3,44 +3,45 @@
 <!-- Head of page -->
 {% block content1 %}
 <link rel="stylesheet" href="{% static 'css/profil_trouvee.css' %}">
-<title>{{profile.libelle}}</title>
+<title>{{metier.libelle}}</title>
 
 {% endblock %} {% block content2 %}
 <!-- MAIN HOME PAGE -->
 
 <article>
     <div class="container_b entete_PF">
-        <h1> {{profile.libelle}}</h1>
-        <p>{{profile.description_courte}}</p>
+        <h1> {{metier.libelle}}</h1>
+        <p>{{metier.description_courte}}</p>
     </div>
     <div class="container_b">
         <h2>Description du métier</h2>
-        <p>{{profile.description}}</p>
+        <p>{{metier.description}}</p>
     </div>
     <div class="container_b">
         <h2>Etude / Formation</h2>
-        <!-- <div class="displayFlex">
-            <img src="{% static 'images/bureau.png' %}" alt="etudes" class=""> -->
-        <p>{{profile.etudes}}</p>
-        <!-- </div> -->
+        <p>{{metier.etudes}}</p>
     </div>
     <div class="container_b">
         <h2>Salaire</h2>
-        <!-- <div class="displayFlex">
-            <img src="{% static 'images/argent.png' %}" alt="Salaire" class=""> -->
-        <p>{{profile.salaire}}</p>
-        <!-- </div> -->
+        <p>{{metier.salaire}}</p>
     </div>
     <div class="container_b">
         <h2>Evolution de carrière</h2>
-        <!-- <div class="displayFlex">
-            <img src="{% static 'images/evolution.png' %}" alt="Evolution" class=""> -->
-        <p>{{profile.evolution_carriere}}</p>
-        <!-- </div> -->
+        <p>{{metier.evolution_carriere}}</p>
+    </div>
+    <div>
+        <h2>Profiles {{metier.libelle}}</h2>
+        {% for p in profiles %} 
+            <p>{{user.username}}</p>
+            <p>Entreprise : {{user.entreprise}}</p>
+            <p>Salaire : {{user.salaire}}</p>
+            <p>Diplôme : {{user.diplome}}</p>
+            <p>Departement : {{user.departement}}</p>
+        {% endfor %}
+
+        <p>Désoler, nous n'avons pas de profile correspondant à ce métier</p>
     </div>
 </article>
-
-
 
 
 {% endblock %}

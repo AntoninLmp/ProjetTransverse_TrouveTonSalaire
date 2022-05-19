@@ -30,16 +30,19 @@
                         </div>
                         <div class="container_2 container_input">
                             <label for="poste">
-                                <img src="{% static 'images/job.png' %}" alt="user" class="img_co_ls">
+                                <img src="{% static 'images/job.png' %}" alt="job" class="img_co_ls">
                             </label>
-                            <input id="poste" type="text" name="poste" placeholder="Poste Actuel" required>
+                            <select name="poste" id="poste" class="sizeSP">
+                                {% for p in postes %}
+                                <option value="{{p.libelle}}">{{p.libelle}}</option>
+                                {% endfor %}
+                            </select>
                         </div>
                         <div class="container_2 container_input">
                             <label for="salaire">
                                 <img src="{% static 'images/money.png' %}" alt="user" class="img_co_ls">
                             </label>
-                            <input id="salaire" type="number" name="salaire" placeholder="Salaire Brut annuel/€"
-                                required>
+                            <input id="salaire" type="number" name="salaire" placeholder="Salaire Brut annuel/€" required>
                         </div>
                         <div class="container_2 container_input">
                             <label for="diplome">
