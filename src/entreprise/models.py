@@ -12,6 +12,8 @@ class Profile(models.Model):
     description_courte = models.TextField(blank=True)
     evolution_carriere = models.TextField(blank=True)
     etudes = models.TextField(blank=True)
+    secteur = models.CharField(max_length=100)
+    
     def __str__(self):
         return self.libelle
 
