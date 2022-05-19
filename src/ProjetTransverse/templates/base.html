@@ -54,6 +54,45 @@
                 </li>
                 {% endif %}
             </ul>
+            <ul class="sous_nav">
+                <div class="menu_burg">
+                    <span class="bar1"></span>
+                    <span class="bar2"></span>
+                    <span class="bar3"></span>
+                </div>
+                <div class="menu_pages">
+                    {% if user.is_authenticated %}
+                    <li class="list_item">
+                        <a href="{% url 'salaire' %}" class="a-item">Métier</a>
+                    </li>
+                    <li class="list_item">
+                        <a href="{% url 'accueil_entreprise' %}" class="a-item">Entreprise</a>
+                    </li>
+                    <li class="list_item">
+                        <a href="{% url 'orientation' %}" class="a-item">Orientation</a>
+                    </li>
+                    <li class="list_item">
+                        <a href="{% url 'compte' %}" class="a-item">{{user.username}}</a>
+                    </li>
+                    {% else %}
+                    <li class="list_item">
+                        <a href="{% url 'login' %}" class="a-item">Métier</a>
+                    </li>
+                    <li class="list_item">
+                        <a href="{% url 'login' %}" class="a-item">Entreprise</a>
+                    </li>
+                    <li class="list_item">
+                        <a href="{% url 'login' %}" class="a-item">Orientation</a>
+                    </li>
+                    <li class="list_item">
+                        <a href="{% url 'login' %}" class="a-item">Connexion</a>
+                    </li>
+                    <li class="list_item">
+                        <a href="{% url 'signup' %}" class="a-item">S'inscrire</a>
+                    </li>
+                    {% endif %}
+                </div>
+            </ul>
         </nav>
     </header>
     <main>
@@ -73,11 +112,16 @@
         </ul>
         <div class="footer_container">
             <p>© 2022, create by Antonin Lampin, Houda Zamani et Simon Martinenq</p>
-            <img src="https://webstockreview.net/images/instagram-clipart-black-and-white-15.png" alt="Instagram Logo" class="footerImg">
-            <img src="https://www.shareicon.net/data/2016/07/14/607478_facebook_4096x4096.png" alt="Facebook logo" class="footerImg">
-            <a href="https://www.linkedin.com/company/projet-transverse"><img src="https://sguru.org/wp-content/uploads/2018/02/linkedin-png-linkedin-icon-1600.png" alt="Linkedin Logo" class="footerImg"></a>
+            <img src="https://webstockreview.net/images/instagram-clipart-black-and-white-15.png" alt="Instagram Logo"
+                class="footerImg">
+            <img src="https://www.shareicon.net/data/2016/07/14/607478_facebook_4096x4096.png" alt="Facebook logo"
+                class="footerImg">
+            <a href="https://www.linkedin.com/company/projet-transverse"><img
+                    src="https://sguru.org/wp-content/uploads/2018/02/linkedin-png-linkedin-icon-1600.png"
+                    alt="Linkedin Logo" class="footerImg"></a>
         </div>
     </footer>
+    <script src="{% static 'js/hamburger.js' %}"></script>
 </body>
 
 </html>
