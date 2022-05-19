@@ -1,12 +1,12 @@
 h1 {
     color: #417D7A;
     font-size: 2.5em;
+    padding: 5% 0;
 }
 
 h2 {
     color: #4b9b97;
-    text-decoration: underline;
-    font-size: 1.8em;
+    font-size: 1.5em;
     margin-left: 5%;
     text-align: center;
 }
@@ -18,8 +18,40 @@ p {
     line-height: 30px;
 }
 
+.container_principal {
+    background-color: #f7f7f7;
+    margin: 0 10%;
+    border-radius: 13px;
+}
+
 .container_b {
     margin: 10px 10%;
+    padding: 2% 5%;
+    border-radius: 13px;
+}
+
+.portion {
+    display: flex;
+}
+
+.titre_ {
+    font-size: 1em;
+    text-decoration: none;
+}
+
+.case_filtre {
+    /* border-right: 1px solid #deddddcb; */
+    border-right: 1px solid #cbcbcb;
+    width: 15%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0.5em;
+}
+
+.case_filtre:hover {
+    background-color: rgb(235, 235, 235);
+    cursor: pointer;
 }
 
 img {
@@ -32,4 +64,64 @@ img {
 
 .displayFlex {
     display: flex;
+}
+
+#descrip,
+#etude,
+#salaire,
+#evolution,
+#profils {
+    display: none;
+    background-color: rgb(247, 247, 247);
+}
+
+.container_user {
+    display: flex;
+
+}
+
+.user {
+    border: 1px solid grey;
+    border-radius: 10px;
+    padding: 0.5em;
+    text-align: center;
+    font-size: 0.7em;
+    text-transform: capitalize;
+    margin: 2%;
+    width: 50%;
+}
+
+.user p {
+    text-align: center;
+    margin: 2% 15%;
+}
+
+.p_ent {
+    color: #417D7A;
+    text-transform: uppercase;
+}
+
+.imgAvatar {
+    width: 50%;
+}
+
+.informations_avatar {
+    display: flex;
+    align-items: center;
+}
+
+.img_co_ls {
+    margin: 0 5%;
+    width: 30px;
+    height: 30px;
+    display: flex;
+}
+
+.envoyer_mess {
+    text-decoration: none;
+    text-decoration: none;
+    text-transform: uppercase;
+    color: #4b9b97;
+    font-weight: 800;
+    font-style: italic;
 }
