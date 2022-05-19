@@ -1,4 +1,5 @@
 from django.shortcuts import render, get_object_or_404
+from accounts.models import utilisateur
 
 from entreprise.models import Profile
 
@@ -17,5 +18,6 @@ def salaire(request):
 
 
 def profile_trouve(request, slug):
-    profile = get_object_or_404(Profile,slug=slug)
-    return render(request, "profile_trouve.html", context={"profile" : profile})
+    metier = get_object_or_404(Profile,slug=slug)
+    profiles = utilisateur.objects.filter(poste=metier.libelle)
+    return render(request, "profile_trouve.html", context={"metier" : metier,"profiles":profiles})
