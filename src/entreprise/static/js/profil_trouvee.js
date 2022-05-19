@@ -10,7 +10,7 @@ const SAL = document.querySelector("#S");
 const EVO = document.querySelector("#EV");
 const PRO = document.querySelector("#PF");
 
-profil.style.display = 'block';
+desc.style.display = 'block';
 DES.style.backgroundColor = "#deddddcb"
 
 

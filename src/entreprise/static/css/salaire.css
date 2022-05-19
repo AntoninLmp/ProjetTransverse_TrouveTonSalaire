@@ -85,7 +85,7 @@ button {
     padding: 0.3em;
     border-radius: 15px;
     background: #417D7A;
-    margin: 0 40%;
+    margin-left: 40%;
     padding: 0.5em;
     /* text-transform: uppercase; */
 }
@@ -130,20 +130,25 @@ button {
     background-color: black;
 }
 
-form.form_recherche {
-    display: table;
-}
-
-div.form_recherche {
-    display: table-row;
-}
-
 label,
-input {
+input,
+select {
     display: table-cell;
     margin-bottom: 10px;
 }
 
 label {
     padding-right: 10px;
+}
+
+.form_recherche {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#jobTitle,
+#categorie {
+    width: 200px;
+    padding: 0.5em;
 }

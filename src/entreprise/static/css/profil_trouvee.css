@@ -88,11 +88,12 @@ img {
     font-size: 0.7em;
     text-transform: capitalize;
     margin: 2%;
+    width: 50%;
 }
 
 .user p {
     text-align: center;
-    margin: 3% 15%;
+    margin: 2% 15%;
 }
 
 .p_ent {
