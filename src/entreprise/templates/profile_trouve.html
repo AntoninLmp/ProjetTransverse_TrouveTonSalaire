@@ -9,39 +9,83 @@
 <!-- MAIN HOME PAGE -->
 
 <article>
-    <div class="container_b entete_PF">
-        <h1> {{metier.libelle}}</h1>
-        <p>{{metier.description_courte}}</p>
+    <div class="container_principal">
+        <div class="container_b entete_PF">
+            <h1> {{metier.libelle}}</h1>
+            <p>{{metier.description_courte}}</p>
+        </div>
+        <div class="portion">
+            <div class="case_filtre" id="D">
+                <h2 class="titre_">Description du métier</h2>
+            </div>
+            <div class="case_filtre" id="E">
+                <h2 class="titre_">Etude / Formation</h2>
+            </div>
+            <div class="case_filtre" id="S">
+                <h2 class="titre_">Salaire</h2>
+            </div>
+            <div class="case_filtre" id="EV">
+                <h2 class="titre_">Evolution</h2>
+            </div>
+            <div class="case_filtre" id="PF">
+                <h2 class="titre_">Profils</h2>
+            </div>
+        </div>
     </div>
-    <div class="container_b">
+    <div class="container_b" id="descrip">
         <h2>Description du métier</h2>
         <p>{{metier.description}}</p>
     </div>
-    <div class="container_b">
+    <div class="container_b" id="etude">
         <h2>Etude / Formation</h2>
         <p>{{metier.etudes}}</p>
     </div>
-    <div class="container_b">
+    <div class="container_b" id="salaire">
         <h2>Salaire</h2>
         <p>{{metier.salaire}}</p>
     </div>
-    <div class="container_b">
+    <div class="container_b" id="evolution">
         <h2>Evolution de carrière</h2>
         <p>{{metier.evolution_carriere}}</p>
     </div>
-    <div>
-        <h2>Profiles {{metier.libelle}}</h2>
-        {% for p in profiles %} 
-            <p>{{user.username}}</p>
-            <p>Entreprise : {{user.entreprise}}</p>
-            <p>Salaire : {{user.salaire}}</p>
-            <p>Diplôme : {{user.diplome}}</p>
-            <p>Departement : {{user.departement}}</p>
-        {% endfor %}
+    <div class="container_b" id="profils">
+        <h2>Profils {{metier.libelle}}</h2>
+        <div class="container_user">
+            {% for p in profiles %}
+            <div class="user">
+                <img src="{% static 'images/avatar.png' %}" alt="avatar" class="imgAvatar">
+                <!-- <p>{{user.username}}</p> -->
+                <div class="informations_avatar">
+                    <img src="{% static 'images/entreprise.png' %}" alt="user" class="img_co_ls">
+                    <p class="p_ent">{{p.entreprise}}</p>
+                </div>
+                <div class="informations_avatar">
+                    <img src="{% static 'images/money.png' %}" alt="user" class="img_co_ls">
+                    <p>{{p.salaire}} €/mois</p>
+                </div>
+                <div class="informations_avatar">
+                    <img src="{% static 'images/diplome.png' %}" alt="user" class="img_co_ls">
+                    <p>{{p.diplome}}</p>
+                </div>
+                <div class="informations_avatar">
+                    <img src="{% static 'images/france.png' %}" alt="user" class="img_co_ls">
+                    <p>{{p.departement}}</p>
+                </div>
+                <div class="informations_avatar">
+                    <img src="{% static 'images/name.png' %}" alt="user" class="img_co_ls">
+                    <p>
+                        <a href="mailto:{{p.email}}" class="envoyer_mess">Envoyer un message</a>
+                    </p>
 
-        <p>Désoler, nous n'avons pas de profile correspondant à ce métier</p>
+                </div>
+            </div>
+            {% endfor %}
+            <!-- <p>Désoler, nous n'avons pas de profile correspondant à ce métier</p> -->
+        </div>
     </div>
 </article>
+
+<script src="{% static 'js/profil_trouvee.js' %}"></script>
 
 
 {% endblock %}
