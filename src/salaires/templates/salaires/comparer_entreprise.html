@@ -1,0 +1,64 @@
+{% extends 'base.html' %} {% load static %} 
+{% block content1 %}
+<link rel="stylesheet" href="{% static 'css/entreprise_trouvee.css' %}">
+<title>{{entreprise1.nom}} vs {{entreprise2.nom}}</title>
+{% endblock %} 
+{% block content2 %}
+
+<article class="navbar_entreprise sizearticle">
+    <div class="bannier">
+        <!-- <img src="http://wallpaperheart.com/wp-content/uploads/2018/04/HD-Wallpaper-Pictures-hd-walpaper.jpg" alt=""> -->
+    </div>
+    <div class="logoEntr">
+        <img src="{{entreprise1.logo}}" alt="{{entreprise1.nom}}">
+    </div>
+    <div class="descrip">
+        <h1> {{entreprise1.nom}}</h1>
+        <p>{{entreprise1.description}}</p>
+        <div class="flex">
+            <div class="bulles"><a href="{{ entreprise1.site_web }}">Site Web</a></div>
+            <div class="bulles">Suivre</div>
+        </div>
+    </div>
+    <div>
+        <h2>Profiles</h2>
+        {% for p in profiles %}
+        <div>
+            <p>{{p.username}}</p>
+            <p>Salaire : {{p.salaire}}</p>
+            <p>Diplôme : {{p.diplome}}</p>
+            <p>Departement : {{p.departement}}</p>
+        </div>
+        {% endfor %}
+    </div>
+</article>
+
+<article class="navbar_entreprise sizearticle">
+    <div class="bannier">
+        <!-- <img src="http://wallpaperheart.com/wp-content/uploads/2018/04/HD-Wallpaper-Pictures-hd-walpaper.jpg" alt=""> -->
+    </div>
+    <div class="logoEntr">
+        <img src="{{entreprise2.logo}}" alt="{{entreprise2.nom}}">
+    </div>
+    <div class="descrip">
+        <h1> {{entreprise2.nom}}</h1>
+        <p>{{entreprise2.description}}</p>
+        <div class="flex">
+            <div class="bulles"><a href="{{ entreprise2.site_web }}">Site Web</a></div>
+            <div class="bulles">Suivre</div>
+        </div>
+    </div>
+    <div>
+        <h2>Profiles</h2>
+        {% for p in profiles %}
+        <div>
+            <p>{{p.username}}</p>
+            <p>Salaire : {{p.salaire}}</p>
+            <p>Diplôme : {{p.diplome}}</p>
+            <p>Departement : {{p.departement}}</p>
+        </div>
+        {% endfor %}
+    </div>
+</article>
+
+{% endblock %}
