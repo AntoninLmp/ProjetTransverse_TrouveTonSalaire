@@ -12,13 +12,21 @@
     <h1 class="pad_rec">Trouve ton job</h1>
     <form method="POST">
         {% csrf_token %}
-        <div class="pad_rec_2">
+        <div class="form_recherche">
             <label for="jobTitle"></label>
             <input id="jobTitle" type="text" name="jobTitle" placeholder="Métier (DataScientist...)">
         </div>
-        <div class="pad_rec_2">
-            <label for="villeJob"></label>
-            <input id="villeJob" type="text" name="villeJob" placeholder="Ville">
+        <div class="form_recherche">
+            <label for="categorie">Secteur</label>
+            <select name="categorie" id="categorie">
+                <option value="">Tous secteur</option>
+                <option value="Informatique - Web - Réseaux">Informatique - Web - Réseaux</option>
+                <option value="Banque - Finance - Assurance">Banque - Finance - Assurance</option>
+            </select>
+        </div>
+        <div class="form_recherche">
+            <label for="recrute">Métiers qui recrutent</label>
+            <input type="checkbox" name="recrute">        
         </div>
         <button type="submit" id="buttonRechercher">Rechercher</button>
     </form>
