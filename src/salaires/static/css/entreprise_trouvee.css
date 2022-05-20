@@ -68,8 +68,8 @@ main {
 
 .descrip {
     position: relative;
-    top: -10%;
-    margin-left: 2em;
+    top: -50px;
+    margin: 0 2em;
 }
 
 .bulles {
@@ -86,4 +86,56 @@ main {
 
 .bulles:hover {
     background-color: rgb(52, 108, 110);
+}
+
+
+.user {
+    border: 1px solid grey;
+    border-radius: 10px;
+    padding: 0.5em;
+    text-align: center;
+    font-size: 0.9em;
+    text-transform: capitalize;
+    margin: 2%;
+    width: 40%;
+}
+
+.user p {
+    text-align: center;
+    margin: 2% 15%;
+}
+
+.p_ent {
+    color: #417D7A;
+    text-transform: uppercase;
+}
+
+.imgAvatar {
+    width: 35%;
+}
+
+.informations_avatar {
+    display: flex;
+    align-items: center;
+}
+
+.img_co_ls {
+    margin: 0 5%;
+    width: 30px;
+    height: 30px;
+    display: flex;
+}
+
+.envoyer_mess {
+    text-decoration: none;
+    text-decoration: none;
+    text-transform: uppercase;
+    color: #4b9b97;
+    font-weight: 800;
+    font-style: italic;
+}
+
+.flewWrap {
+    flex-wrap: wrap;
+    justify-content: center;
 }

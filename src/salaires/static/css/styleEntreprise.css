@@ -67,3 +67,18 @@ img {
     letter-spacing: 2px;
     color: #417D7A;
 }
+
+.div_rech {
+    margin: 3% 0;
+}
+
+.bouton_pagination {
+    display: flex;
+    justify-content: center;
+    margin: 3% 0;
+}
+
+.button_style {
+    padding: 0.5em;
+    margin-right: 5px;
+}
