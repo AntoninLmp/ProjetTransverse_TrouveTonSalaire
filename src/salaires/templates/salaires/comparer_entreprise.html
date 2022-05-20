@@ -1,8 +1,8 @@
-{% extends 'base.html' %} {% load static %} 
+{% extends 'base.html' %} {% load static %}
 {% block content1 %}
 <link rel="stylesheet" href="{% static 'css/entreprise_trouvee.css' %}">
 <title>{{entreprise1.nom}} vs {{entreprise2.nom}}</title>
-{% endblock %} 
+{% endblock %}
 {% block content2 %}
 
 <article class="navbar_entreprise sizearticle">
@@ -20,7 +20,7 @@
             <div class="bulles">Suivre</div>
         </div>
     </div>
-    <div>
+    <div class="descrip">
         <h2>Profiles</h2>
         {% for p in profiles %}
         <div>
