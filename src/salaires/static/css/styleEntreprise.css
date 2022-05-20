@@ -45,3 +45,25 @@ img {
 .container_1_entreprise a:hover {
     background-color: #376967;
 }
+
+
+/* Recherche */
+
+.recherche {
+    margin: 3% 34.5% 0;
+    padding: 1em;
+    text-align: center;
+    border: 3px solid #1D5C63;
+    border-radius: 15px;
+}
+
+.recherche input {
+    padding: 0.5em;
+    border-radius: 5px;
+}
+
+.recherche h1 {
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    color: #417D7A;
+}

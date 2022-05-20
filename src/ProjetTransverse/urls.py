@@ -17,7 +17,7 @@ Including another URLconf
 from django.contrib import admin
 from django.urls import path
 from ProjetTransverse.views import index, page
-from salaires.views import accueil_entreprise, entreprise_trouvee, orientation
+from salaires.views import accueil_entreprise, comparer_entreprise, entreprise_trouvee, orientation
 from ProjetTransverse import settings
 from django.conf.urls.static import static
 from accounts.views import signup, logout_user, login_user,compte
@@ -33,6 +33,7 @@ urlpatterns = [
     path('compte/',compte,name="compte"),
     path('entreprise/',accueil_entreprise, name="accueil_entreprise"),
     path('entreprise/<str:slug>/',entreprise_trouvee, name="entreprise_trouvee"),
+    path('comparer-entreprise/<str:slug>/',comparer_entreprise, name="comparer_entreprise"),
     path('orientation/',orientation, name="orientation"),
     path('salaire/',salaire, name="salaire"),
     path('salaire/<str:slug>/',profile_trouve, name="profile_trouve"),

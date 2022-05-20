@@ -1,6 +1,9 @@
 from django.db import models
 from django.urls import reverse
 
+from accounts.views import User
+
+
 # Create your models here.
 # voir la vidéo à 16min
 
@@ -17,3 +20,7 @@ class Entreprise(models.Model):
 
     def get_absolute_url(self):
         return reverse("entreprise_trouvee", kwargs={"slug": self.slug})
+    
+    def get_absolute_url2(self):
+        return reverse("comparer_entreprise", kwargs={"slug": self.slug})
+    

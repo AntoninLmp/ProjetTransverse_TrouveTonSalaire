@@ -1,12 +1,7 @@
-{% extends 'base.html' %}
-{% load static %}
-
-{% block content1 %}
+{% extends 'base.html' %} {% load static %} {% block content1 %}
 <link rel="stylesheet" href="{% static 'css/entreprise_trouvee.css' %}">
 <title>{{entreprise.nom}}</title>
-{% endblock %}
-
-{% block content2 %}
+{% endblock %} {% block content2 %}
 
 <aside class="navbar_entreprise sizenav">
     <div>
@@ -38,14 +33,21 @@
         <div class="flex">
             <div class="bulles"><a href="{{ entreprise.site_web }}">Site Web</a></div>
             <div class="bulles">Suivre</div>
-            <div class="bulles">Comparer</div>
+            <div class="bulles"><a href="{{ entreprise.get_absolute_url2 }}">Comparer</a></div>
         </div>
     </div>
+    <div>
+        <h2>Profiles</h2>
+        {% for p in profiles %}
+        <div>
+            <p>{{p.username}}</p>
+            <p>Salaire : {{p.salaire}}</p>
+            <p>Diplôme : {{p.diplome}}</p>
+            <p>Departement : {{p.departement}}</p>
+        </div>
+        {% endfor %}
+    </div>
+</article>
 
-    <!-- <h2> {{entreprise.nom}}</h2> -->
-    <!-- <p>{{entreprise.description}}</p> -->
-    <!-- <img src="{{entreprise.logo}}" alt="{{entreprise.nom}}"> -->
-    <!-- <a href="{{ entreprise.site_web }}"> site web </a> -->
 
-
-    {% endblock %}
+{% endblock %}

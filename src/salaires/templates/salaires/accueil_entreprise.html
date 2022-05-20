@@ -5,6 +5,20 @@
 <article id="liste_ent">
 
     <h1> Entreprises</h1>
+    <article class="recherche">
+        <form method="POST">
+            {% csrf_token %}
+            <div>
+                <label for="entrepriseLibelle"></label>
+                <input id="entrepriseLibelle" type="text" name="entrepriseLibelle" placeholder="Entreprise">
+            </div>
+            <div>
+                <label for="localisation"></label>
+                <input id="localisation" type="text" name="localisation" placeholder="Localisation">
+            </div>
+            <button type="submit" id="buttonRechercher">Rechercher</button>
+        </form>
+    </article>
     <div class="container_tt_entreprise" id="div1">
         {% for ent in entreprises %}{% if forloop.counter < 11 %}
         <div class="container_1_entreprise">
